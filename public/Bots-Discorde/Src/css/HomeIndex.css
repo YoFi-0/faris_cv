@@ -1,0 +1,36 @@
+/*  Start Global Rules */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #181537;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+}
+
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: darkblue;
+  border-radius: 10%;
+}
+
+/*# sourceMappingURL=HomeIndex.css.map */

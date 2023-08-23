@@ -1,0 +1,81 @@
+@import "./color-all";
+
+
+%landing_page {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+
+    img {
+        overflow: hidden;
+        width: 100%;
+        height: 104vh;
+
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        object-fit: cover;
+    }
+
+    .overlay {
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        height: 104vh;
+        background-color: rgba(0, 0, 0, 0.76);
+        position: absolute;
+    }
+
+    .container {
+        color: white;
+        display: flex;
+        height: 100vh;
+        justify-content: space-around;
+        flex-direction: column;
+        margin: max(0vw, 0em) max(3vw, 3em);
+
+        .text-landing {
+            z-index: 100;
+            position: relative;
+
+            h1 {
+                color: #6C63FF;
+                font-size: max(5vw, 5em);
+                position: inherit;
+                left: max(-90vw, -90em);
+                width: max(9vw, 9em);
+
+                span {
+                    color: white;
+                    font-size: max(3vw, 0em);
+                    font-weight: lighter;
+                }
+            }
+
+            p {
+                width: max(20vw, 20em);
+                position: inherit;
+                left: max(-90vw, -90em);
+                font-size: max(2vw, 2em);
+                margin: max(1vw, 0em) max(0vw, 0em) max(0vw, 0em) max(1vw, 2em);
+            }
+        }
+
+        .titel {
+            z-index: 100;
+            position: relative;
+
+            p {
+                position: inherit;
+                color: white;
+                transition: .3s;
+                font-size: max(2vw, 2em);
+                width: fit-content;
+                bottom: max(-25vw, -25em);
+            }
+        }
+    }
+}

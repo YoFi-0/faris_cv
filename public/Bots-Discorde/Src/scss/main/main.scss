@@ -1,0 +1,81 @@
+
+@import "./nav-bullets";
+@import "./landingPage";
+@import "./aboute";
+@import "./discord";
+@import "./strore";
+@import "./Pricing";
+@import "./footer";
+@import "./effect_container";
+@import "./color-all";
+
+/*  Start Global Rules */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: $color-181537;
+    font-weight: bold;
+    overflow: hidden;
+
+}
+ul {
+    list-style: none;
+}
+
+html::-webkit-scrollbar {
+    width: .5rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: $color-142850;
+    border-radius: 10%;
+}
+
+.nav-bullets {
+    @extend %nav-bullets;  
+}
+
+.landing_page {
+    @extend %landing_page;
+}
+
+.aboute {
+    @extend %aboute;
+    display: none;
+}
+
+.discord {
+    @extend %discord;
+    display: none;
+}
+
+.strore {
+    @extend %strore;
+    display: none;
+}
+
+.Pricing {
+    @extend %Pricing;
+    display: none;
+}
+
+.footer {
+    @extend %footer;
+    display: none;
+}
+
+.effect_container {
+    @extend %effect_container;
+}

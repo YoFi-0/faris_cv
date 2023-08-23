@@ -1,0 +1,671 @@
+/*  Start Global Rules */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #212121;
+  margin: 0;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+}
+
+.asid {
+  position: relative;
+  background-color: #222222;
+  height: 100vh;
+  overflow: hidden;
+}
+.asid .asid_bag {
+  position: relative;
+  display: flex;
+  height: -webkit-fill-available;
+}
+.asid .asid_bag .selct_box {
+  position: relative;
+  background-color: #1c1c1c;
+  text-align: center;
+  width: max(25vw, 25em);
+  z-index: 100;
+  transition: ease 0.7s;
+}
+.asid .asid_bag .selct_box .toggle-settings {
+  position: absolute;
+  right: max(-3.3vw, -3.3em);
+  border-radius: max(0vw, 0em) max(1vw, 1em) max(1vw, 1em) max(0vw, 0em);
+  top: max(0.5vw, 0.5em);
+  color: white;
+  background-image: linear-gradient(90deg, #1c1c1c, #2f2f2f);
+}
+@media (max-width: 960px) {
+  .asid .asid_bag .selct_box .toggle-settings {
+    right: max(-5vw, -5em);
+  }
+}
+@media (max-width: 960px) and (max-width: 790px) {
+  .asid .asid_bag .selct_box .toggle-settings {
+    right: max(-5.7vw, -5.7em);
+  }
+}
+@media (max-width: 960px) and (max-width: 635px) {
+  .asid .asid_bag .selct_box .toggle-settings {
+    right: max(-7.7vw, -7.7em);
+  }
+}
+@media (max-width: 960px) and (max-width: 500px) {
+  .asid .asid_bag .selct_box .toggle-settings {
+    right: max(-9.7vw, -9.7em);
+  }
+}
+@media (max-width: 960px) and (max-width: 395px) {
+  .asid .asid_bag .selct_box .toggle-settings {
+    right: max(-11.7vw, -11.7em);
+  }
+}
+.asid .asid_bag .selct_box .toggle-settings .settin {
+  padding: max(0.7vw, 0.7em);
+  text-align: center;
+  cursor: pointer;
+  font-size: max(1.4vw, 1.4em);
+}
+.asid .asid_bag .selct_box .leftt {
+  left: 0;
+  position: relative;
+}
+.asid .asid_bag .selct_box .leftt img {
+  width: max(6vw, 5em);
+  border-radius: max(50vw, 50em);
+  margin: max(2vw, 2em) max(0vw, 0em) max(0vw, 0em);
+}
+.asid .asid_bag .selct_box .leftt .product {
+  color: white;
+  font-weight: bold;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: max(-1vw, -1em) auto;
+  text-align: initial;
+}
+.asid .asid_bag .selct_box .leftt .product h1 {
+  padding: max(1vw, 1em) max(0vw, 0em);
+  font-size: max(1.9vw, 1.9em);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.asid .asid_bag .selct_box .leftt .link {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 91vh;
+}
+.asid .asid_bag .selct_box .leftt .link .top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.asid .asid_bag .selct_box .leftt .link .top a.activ {
+  position: relative;
+  color: #ffffff;
+  background-color: #222222;
+  padding: max(1vw, 1em);
+  z-index: 100;
+  overflow: hidden;
+  font-size: max(1.3vw, 1.3em);
+  margin-bottom: max(0.7vw, 0.7em);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: auto;
+  z-index: 1;
+}
+.asid .asid_bag .selct_box .leftt .link .top a {
+  position: relative;
+  color: #ffffff;
+  padding: max(1vw, 1em);
+  z-index: 100;
+  overflow: hidden;
+  font-size: max(1.3vw, 1.3em);
+  margin-bottom: 20px;
+  z-index: 1;
+}
+.asid .asid_bag .selct_box .leftt .link .top a::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: max(0.2vw, 0.2em);
+  height: max(5vw, 5em);
+  background-color: #222222;
+  z-index: -10;
+  transition: ease 0.9s;
+}
+.asid .asid_bag .selct_box .leftt .link .top a:hover::after {
+  width: 100%;
+  color: rgb(255, 255, 255);
+  z-index: -10;
+  border-radius: max(0vw, 0em);
+}
+.asid .asid_bag .selct_box .leftt .link .bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.asid .asid_bag .selct_box .leftt .link .bottom .redDelet {
+  position: relative;
+  color: #fb0000;
+  padding: max(1vw, 1em);
+  z-index: 100;
+  overflow: hidden;
+  font-size: max(1.3vw, 1.3em);
+  margin-bottom: 20px;
+  z-index: 1;
+  transition: ease 0.9s;
+}
+.asid .asid_bag .selct_box .leftt .link .bottom .redDelet::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: max(0.2vw, 0.2em);
+  height: max(5vw, 5em);
+  background-color: #a30000;
+  z-index: -10;
+  transition: ease 0.9s;
+}
+.asid .asid_bag .selct_box .leftt .link .bottom .redDelet:hover::after {
+  width: 100%;
+  z-index: -10;
+  border-radius: max(0vw, 0em);
+}
+.asid .asid_bag .selct_box .leftt .link .bottom .redDelet:hover {
+  color: #ffffff;
+}
+.asid .asid_bag .selct_box .leftt .link .bottom .delet_new {
+  display: none;
+  transition: 0.3s;
+  opacity: 0;
+  position: relative;
+}
+.asid .asid_bag .selct_box .leftt .link .bottom .delet_new span {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.678);
+  z-index: 1;
+}
+.asid .asid_bag .selct_box .leftt .link .bottom .delet_new .contenar11 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(28, 28, 28);
+  padding: 18px;
+  border-radius: 4px;
+  width: 500px;
+  animation: dwonUp 1s backwards;
+  -webkit-animation: dwonUp 1s backwards;
+  z-index: 2;
+}
+.asid .asid_bag .selct_box .leftt .link .bottom .delet_new .contenar11 .Icon_d {
+  position: absolute;
+  top: -25px;
+  right: -18px;
+  font-size: max(3vw, 3em);
+}
+.asid .asid_bag .selct_box .leftt .link .bottom .delet_new .contenar11 .Icon_d i {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  color: white;
+}
+.asid .asid_bag .selct_box .leftt .link .bottom .delet_new .contenar11 h1 {
+  text-align: center;
+  font-size: max(1.3vw, 1.3em);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  padding-bottom: max(1vw, 1em);
+  color: white;
+  user-select: none;
+}
+.asid .asid_bag .selct_box .leftt .link .bottom .delet_new .contenar11 input {
+  position: relative;
+  border: 1px solid transparent;
+  margin: max(1vw, 1em) max(0vw, 0em);
+  background-color: rgba(203, 203, 203, 0);
+  border-radius: 0px;
+  padding: max(0.9vw, 0.9em) max(0vw, 0em);
+  border-bottom: max(0.1vw, 0.1em) solid #fff;
+  display: block;
+  width: 100%;
+  transition: 0.3s;
+  color: #fff;
+}
+.asid .asid_bag .selct_box .leftt .link .bottom .delet_new .contenar11 input::-moz-placeholder {
+  font-weight: 500;
+  color: #777;
+  font-size: max(1vw, 1em);
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+.asid .asid_bag .selct_box .leftt .link .bottom .delet_new .contenar11 input::placeholder {
+  font-weight: 500;
+  color: #777;
+  font-size: max(1vw, 1em);
+  transition: 0.3s;
+}
+.asid .asid_bag .selct_box .leftt .link .bottom .delet_new .contenar11 input:focus {
+  outline: 1;
+  padding: max(0.9vw, 0.9em) max(0.9vw, 0.9em);
+}
+.asid .asid_bag .selct_box .leftt .link .bottom .delet_new .contenar11 input:focus::-moz-placeholder {
+  color: transparent;
+}
+.asid .asid_bag .selct_box .leftt .link .bottom .delet_new .contenar11 input:focus::placeholder {
+  color: transparent;
+}
+.asid .asid_bag .selct_box .leftt .link .bottom .delet_new .contenar11 .butoon {
+  text-align: right;
+  margin: max(2vw, 2em) 0 0;
+}
+.asid .asid_bag .selct_box .leftt .link .bottom .delet_new .contenar11 .butoon .sub {
+  color: white;
+  padding: max(0.5vw, 0.5em) max(1vw, 1em);
+  margin: max(0vw, 0em) max(0vw, 0em) max(0vw, 0em) auto;
+  background-color: #a30000;
+  border-radius: max(0.2vw, 0.2em);
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: max(1.5vw, 1.5em);
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+@keyframes dwonUp {
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+  from {
+    top: 0%;
+    opacity: 0;
+  }
+}
+.asid .asid_bag .selct_box.clos {
+  position: relative;
+  transition: 1s;
+  left: 0;
+  width: 0;
+}
+.asid .asid_bag .com {
+  width: max(75vw, 75em);
+}
+.asid .asid_bag .com .nav_Mini-Bots {
+  color: #ffffff;
+  background-color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: max(1vw, 1em) max(4vw, 4em);
+  z-index: 100;
+  flex-direction: row-reverse;
+}
+.asid .asid_bag .com .nav_Mini-Bots h1 {
+  text-align: center;
+  font-size: max(2vw, 2em);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.asid .asid_bag .com section {
+  padding: max(3vw, 3em) max(1vw, 1em);
+  background-color: #222222;
+  box-shadow: 0 0 25rem 0rem black;
+  height: 100vh;
+}
+@media (max-height: 731px) {
+  .asid .asid_bag .com section {
+    padding: max(0vw, 0em) max(1vw, 1em);
+  }
+}
+@media (max-height: 732px) {
+  .asid .asid_bag .com section {
+    padding: max(0vw, 0em) max(1vw, 1em);
+  }
+}
+.asid .asid_bag .com section h1 {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: max(4vw, 4em);
+  margin: max(0.3vw, 0.3em) 0 max(0.5vw, 0.5em);
+}
+@media (max-width: 715px) {
+  .asid .asid_bag .com section h1 {
+    font-size: max(3.2vw, 3.2em);
+  }
+}
+@media (max-width: 715px) and (max-width: 731px) {
+  .asid .asid_bag .com section h1 {
+    margin: max(0vw, 0em) 0 max(0.5vw, 0.5em);
+  }
+}
+@media (max-width: 715px) and (max-width: 580px) {
+  .asid .asid_bag .com section h1 {
+    font-size: max(2.7vw, 2.7em);
+  }
+}
+@media (max-width: 715px) and (max-width: 496px) {
+  .asid .asid_bag .com section h1 {
+    font-size: max(2vw, 2em);
+  }
+}
+@media (max-width: 715px) and (max-width: 408px) {
+  .asid .asid_bag .com section h1 {
+    font-size: max(1.7vw, 1.7em);
+  }
+}
+.asid .asid_bag .com section .contenar .card {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.asid .asid_bag .com section .contenar .card .glow-button {
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: max(1vw, 1em) max(2vw, 2em);
+  font-size: max(1.5vw, 1.5em);
+  background: #222222;
+  cursor: pointer;
+  position: relative;
+  margin: max(0.3vw, 0.3em);
+  z-index: 0;
+  border-radius: 10px;
+}
+@media (max-width: 831px) {
+  .asid .asid_bag .com section .contenar .card .glow-button {
+    width: 150px;
+    height: 50px;
+    padding: 0 0;
+  }
+}
+.asid .asid_bag .com section .contenar .card .glow-button:before {
+  content: "";
+  background: linear-gradient(45deg, #ffffff, #434343, #212121, #777, #1c1c1c, #2f2f2f, #fff, #2a3a37, #1c1c1c);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+.asid .asid_bag .com section .contenar .card .glow-button:active {
+  color: rgb(255, 255, 255);
+}
+.asid .asid_bag .com section .contenar .card .glow-button:active:after {
+  background: transparent;
+}
+.asid .asid_bag .com section .contenar .card .glow-button:hover:before {
+  opacity: 1;
+}
+.asid .asid_bag .com section .contenar .card .glow-button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #1c1c1c;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.asid .asid_bag .com section .contenar .informations h1 {
+  color: #777;
+  text-align: center;
+  font-weight: bold;
+  font-size: max(3vw, 3em);
+  margin: max(0.1vw, 0.1em) 0 max(0.3vw, 0.3em) 0;
+}
+@media (max-height: 667px) {
+  .asid .asid_bag .com section .contenar .informations h1 {
+    font-size: max(2vw, 2em);
+  }
+}
+.asid .asid_bag .com section .contenar .informations .contact {
+  background-color: #1c1c1c;
+  border-radius: max(0.3vw, 0.3em);
+  width: 70%;
+  margin: 0 auto;
+  padding: max(1vw, 1em) max(2vw, 2em) max(0vw, 0em);
+  overflow-y: auto;
+  max-height: max(23vw, 23em);
+}
+@media (max-width: 520px) {
+  .asid .asid_bag .com section .contenar .informations .contact {
+    width: 101%;
+  }
+}
+@media (max-width: 520px) and (max-height: 731px) {
+  .asid .asid_bag .com section .contenar .informations .contact {
+    padding: max(0vw, 0em) max(2vw, 2em) max(0vw, 0em);
+  }
+}
+@media (max-width: 520px) and (max-height: 732px) {
+  .asid .asid_bag .com section .contenar .informations .contact {
+    padding: max(0vw, 0em) max(2vw, 2em) max(0vw, 0em);
+  }
+}
+@media (max-width: 520px) and (max-height: 667px) {
+  .asid .asid_bag .com section .contenar .informations .contact {
+    max-height: max(18vw, 18em);
+  }
+}
+@media (max-width: 360px) and (max-height: 740px) {
+  .asid .asid_bag .com section .contenar .informations .contact {
+    padding: max(1vw, 1em) max(1vw, 1em) max(0vw, 0em);
+    max-height: max(18vw, 18em);
+  }
+}
+.asid .asid_bag .com section .contenar .informations .contact::-webkit-scrollbar {
+  width: 0.2rem;
+}
+.asid .asid_bag .com section .contenar .informations .contact::-webkit-scrollbar-track {
+  background: transparent;
+}
+.asid .asid_bag .com section .contenar .informations .contact::-webkit-scrollbar-thumb {
+  background: #7b7b7b;
+  border-radius: 20%;
+}
+.asid .asid_bag .com section .contenar .informations .contact .username form {
+  display: flex;
+  flex-direction: column;
+}
+.asid .asid_bag .com section .contenar .informations .contact .username form input {
+  position: relative;
+  border: 1px solid transparent;
+  margin: max(1vw, 1em) max(0vw, 0em);
+  background-color: rgba(203, 203, 203, 0);
+  border-radius: 0px;
+  padding: max(0.9vw, 0.9em) max(0vw, 0em);
+  border-bottom: max(0.1vw, 0.1em) solid #6b6b6b;
+  display: block;
+  transition: 0.3s;
+  color: #fff;
+}
+.asid .asid_bag .com section .contenar .informations .contact .username form input::-moz-placeholder {
+  font-weight: 500;
+  color: #777;
+  font-size: max(1vw, 1em);
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+.asid .asid_bag .com section .contenar .informations .contact .username form input::placeholder {
+  font-weight: 500;
+  color: #777;
+  font-size: max(1vw, 1em);
+  transition: 0.3s;
+}
+.asid .asid_bag .com section .contenar .informations .contact .username form input:focus {
+  outline: 1;
+  padding: max(0.9vw, 0.9em) max(0.9vw, 0.9em);
+}
+.asid .asid_bag .com section .contenar .informations .contact .username form input:focus::-moz-placeholder {
+  color: transparent;
+}
+.asid .asid_bag .com section .contenar .informations .contact .username form input:focus::placeholder {
+  color: transparent;
+}
+.asid .asid_bag .com section .contenar .informations .contact .username form .boteen {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.asid .asid_bag .com section .contenar .informations .contact .username form .boteen .click {
+  border: none;
+  background-color: #333333;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: max(1vw, 1em) max(2vw, 2em);
+  border-radius: max(0.2vw, 0.2em);
+}
+.asid .asid_bag .com section .contenar .informations .contact .email form {
+  display: flex;
+  flex-direction: column;
+}
+.asid .asid_bag .com section .contenar .informations .contact .email form input {
+  position: relative;
+  border: 1px solid transparent;
+  margin: max(1vw, 1em) max(0vw, 0em);
+  background-color: rgba(203, 203, 203, 0);
+  border-radius: 0px;
+  padding: max(0.9vw, 0.9em) max(0vw, 0em);
+  border-bottom: max(0.1vw, 0.1em) solid #6b6b6b;
+  display: block;
+  transition: 0.3s;
+  color: #fff;
+}
+.asid .asid_bag .com section .contenar .informations .contact .email form input::-moz-placeholder {
+  font-weight: 500;
+  color: #777;
+  font-size: max(1vw, 1em);
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+.asid .asid_bag .com section .contenar .informations .contact .email form input::placeholder {
+  font-weight: 500;
+  color: #777;
+  font-size: max(1vw, 1em);
+  transition: 0.3s;
+}
+.asid .asid_bag .com section .contenar .informations .contact .email form input:focus {
+  outline: 1;
+  padding: max(0.9vw, 0.9em) max(0.9vw, 0.9em);
+}
+.asid .asid_bag .com section .contenar .informations .contact .email form input:focus::-moz-placeholder {
+  color: transparent;
+}
+.asid .asid_bag .com section .contenar .informations .contact .email form input:focus::placeholder {
+  color: transparent;
+}
+.asid .asid_bag .com section .contenar .informations .contact .email form .boteen {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.asid .asid_bag .com section .contenar .informations .contact .email form .boteen .click {
+  border: none;
+  background-color: #333333;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: max(1vw, 1em) max(2vw, 2em);
+  border-radius: max(0.2vw, 0.2em);
+}
+.asid .asid_bag .com section .contenar .informations .contact .password form {
+  display: flex;
+  flex-direction: column;
+}
+.asid .asid_bag .com section .contenar .informations .contact .password form input {
+  position: relative;
+  border: 1px solid transparent;
+  margin: max(1vw, 1em) max(0vw, 0em);
+  background-color: rgba(203, 203, 203, 0);
+  border-radius: 0px;
+  padding: max(0.9vw, 0.9em) max(0vw, 0em);
+  border-bottom: max(0.1vw, 0.1em) solid #6b6b6b;
+  display: block;
+  transition: 0.3s;
+  color: #fff;
+}
+.asid .asid_bag .com section .contenar .informations .contact .password form input::-moz-placeholder {
+  font-weight: 500;
+  color: #777;
+  font-size: max(1vw, 1em);
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+.asid .asid_bag .com section .contenar .informations .contact .password form input::placeholder {
+  font-weight: 500;
+  color: #777;
+  font-size: max(1vw, 1em);
+  transition: 0.3s;
+}
+.asid .asid_bag .com section .contenar .informations .contact .password form input:focus {
+  outline: 1;
+  padding: max(0.9vw, 0.9em) max(0.9vw, 0.9em);
+}
+.asid .asid_bag .com section .contenar .informations .contact .password form input:focus::-moz-placeholder {
+  color: transparent;
+}
+.asid .asid_bag .com section .contenar .informations .contact .password form input:focus::placeholder {
+  color: transparent;
+}
+.asid .asid_bag .com section .contenar .informations .contact .password form .boteen {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.asid .asid_bag .com section .contenar .informations .contact .password form .boteen .click {
+  border: none;
+  background-color: #333333;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: max(1vw, 1em) max(2vw, 2em);
+  border-radius: max(0.2vw, 0.2em);
+}/*# sourceMappingURL=Account.css.map */

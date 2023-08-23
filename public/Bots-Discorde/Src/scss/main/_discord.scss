@@ -1,0 +1,89 @@
+%discord {
+    padding: max(0vw, 0em) max(8vw, 8em);
+    height: 100vh;
+    display: none;
+
+    @media (max-width: 1245px) {
+        & {
+            padding: max(0vw, 0em) max(6vw, 6em);
+        }
+        @media (max-width: 1150px) {
+            & {
+                padding: max(0vw, 0em) max(3vw, 3em);
+            }
+        }
+    }
+
+    .discord-content {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+
+        .left,
+        .right {
+            width: max(23vw, 23em);
+            position: relative;
+        }
+
+        .left {
+            float: left;
+            position: inherit;
+            left: max(-50vw, -50em);
+        }
+
+        .right {
+            float: right;
+            position: inherit;
+            right: max(-50vw, -50em);
+        }
+
+        .content {
+            border-radius: max(0.5vw, 0.5em);
+            position: relative;
+            padding: max(1vw, 1em);
+            backdrop-filter: blur(10px);
+
+            box-shadow: 0 0 115px -38px black;   
+
+
+            .title {
+                text-align: center;
+                width: 100%;
+                padding: max(2vw, 2em) max(0vw, 0em) max(1vw, 1em);
+
+                img {
+                    width: max(6vw, 6em);
+                    border-radius: max(5vw, 5em);
+                }
+            }
+
+            h1 {
+                text-align: center;
+                font-weight: bold;
+                color: white;
+                margin: max(0vw, 0em) max(0vw, 0em) max(0.3vw, 0.3em);
+                font-size: max(2vw, 2em);
+            }
+
+            h2 {
+                text-align: center;
+                font-weight: bold;
+                color: #6C63FF;
+                margin: max(0vw, 0em) max(0vw, 0em) max(1vw, 1em);
+                font-size: max(1.5vw, 1.5em);
+                letter-spacing: 6px;
+            }
+
+            p {
+                color: #e3e3e3c7;
+                margin: 0;
+                font-size: max(0.8vw, 1em);
+                line-height: 1.6;
+            }
+        }
+    }
+}

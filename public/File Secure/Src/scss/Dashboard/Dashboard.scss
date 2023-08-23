@@ -1,0 +1,312 @@
+/*  Start Global Rules */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #2C2C2C;
+    margin: 0;
+    font-weight: bold;
+}
+
+body::-webkit-scrollbar {
+    width: .2rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border-radius: 1%;
+}
+
+
+header {
+    background-color: #313131;
+    user-select: none;
+
+    .continer {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: max(1vw, 1em) max(1vw, 1em) max(0.5vw, 0.5em);
+
+        img {
+            max-width: max(4vw, 4em);
+            max-height: max(4vw, 4em);
+            border-radius: max(10vw, 10em);
+            margin-left: max(1vw, 1em);
+            user-select: none;
+
+        }
+
+        h1 {
+            color: white;
+            font-size: max(2vw, 2em);
+
+            @media (max-width: 315px) {
+                & {
+                    font-size: max(1vw, 1em);
+                }
+            }
+        }
+    }
+}
+
+
+.allCars {
+
+    .continer {
+
+        .card {
+            display: flex;
+            width: 100%;
+            margin: 0 auto;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            align-items: center;
+
+            .box {
+                position: relative;
+                background-color: rgba(255, 255, 255, 0.02);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: max(0.7vw, 0.7em);
+                cursor: pointer;
+                padding: max(1.7vw, 1.7em) max(1.7vw, 1.7em) max(0.7vw, 0.7em);
+                text-align: center;
+                width: max(25vw, 25rem);
+                margin: max(1vw, 1em);
+
+                &:hover::before {
+                    opacity: 1;
+                }
+
+                &::before,
+                &::after {
+                    border-radius: inherit;
+                    content: "";
+                    height: 100%;
+                    left: 0px;
+                    opacity: 0;
+                    position: absolute;
+                    top: 0px;
+                    transition: opacity .3s;
+                    width: 100%;
+                }
+
+                &::before {
+                    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
+                            rgba(255, 255, 255, 0.06),
+                            transparent 40%);
+                    z-index: 3;
+                }
+
+                h1 {
+                    color: white;
+                    padding-bottom: max(0.9vw, 0.9em);
+                    font-size: max(2vw, 2em);
+                    user-select: none;
+
+                    @media (max-width: 430px) {
+                        & {
+                            font-size: max(1vw, 1em);
+                        }
+                    }
+                }
+
+                p {
+                    color: white;
+                    font-size: max(3vw, 3em);
+
+                    @media (max-width: 430px) {
+                        & {
+                            font-size: max(2vw, 2em);
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+        // Table
+        .outputs {
+            width: 100%;
+            text-align: center;
+            border-radius: max(0.4vw, 0.4em);
+
+            .search {
+                margin: 0 max(2vw, 2em);
+                position: relative;
+                width: max(3.7vw, 3.7em);
+                height: max(3.7vw, 3.7em);
+                border-radius: max(1vw, 1em) max(1vw, 1em) 0 0;
+                background-color: white;
+                transition: ease-in-out 0.5s;
+                overflow: hidden;
+
+
+
+                &.active {
+                    width: max(25vw,25em);
+                }
+
+                .icon {
+                    position: absolute;
+                    left: max(1.8vw, 1.8em);
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+
+                    .sear {
+                        font-size: max(2vw, 2em);
+                        cursor: pointer;
+                        color: #444;
+                        right: max(0vw,0em);
+                        position: relative;
+                    }
+                }
+
+                .input {
+                    position: relative;
+                    width: max(19vw, 19em);
+                    height: max(3.7vw, 3.7em);
+                    left: max(4vw, 4em);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    input {
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        border: none;
+                        font-size: max(1vw,1em);
+                        color: #777;
+                        outline: none;
+                        
+                        &:focus {
+                            font-size: max(1vw,1em);
+                            color: rgb(0, 0, 0);
+                        }
+                    }
+
+                    .clear {
+                        position: absolute;
+                        right: max(-2vw, -2em);
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        cursor: pointer;
+                        font-size: max(2vw,2em);
+                        color: rgba(136, 136, 136, 0.5333333333);
+                    }
+                }
+
+            }
+
+            &::-webkit-scrollbar {
+                width: .2rem;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: transparent;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: #2c2c2c;
+                border-radius: 50%;
+            }
+
+            .scroll {
+                width: 96%;
+                margin: 0 auto max(1vw, 1em);
+                max-height: 30vh;
+                overflow-y: auto;
+                border-radius: max(0.4vw, 0.4em);
+
+                &::-webkit-scrollbar {
+                    width: .2rem;
+                }
+                
+                &::-webkit-scrollbar-track {
+                    background: transparent;
+                }
+                
+                &::-webkit-scrollbar-thumb {
+                    background: #ffffff;
+                    border-radius: 1%;
+                }
+            }
+
+            table {
+                width: 100%;
+                text-align: center;
+                background-color: #111;
+
+                tr {
+                    th {
+                        text-transform: uppercase;
+                        color: white;
+                        padding: 5px;
+                        width: 17%;
+                    }
+                }
+
+                tbody {
+
+                    td {
+                        color: white;
+
+                        .delete {
+                            background-color: rgb(175, 0, 0);
+                            color: white;
+                            padding: max(0.5vw, 0.5em) max(1.5vw, 1.5em);
+                            font-size: max(1.5vw, 1.5em);
+                            border-radius: 7px;
+                            cursor: pointer;
+                            transition: all 0.3s ease 0s;
+                            border: none;
+
+                            &:hover {
+                                background-color: #333333;
+                                letter-spacing: 0;
+                                color: #ff0000;
+                            }
+                        }
+
+                        .update {
+                            background-color: #333333;
+                            color: white;
+                            padding: max(0.5vw, 0.5em) max(1.5vw, 1.5em);
+                            font-size: max(1.5vw, 1.5em);
+                            border-radius: 7px;
+                            cursor: pointer;
+                            margin: max(0.2vw, 0.2em)max(0.6vw, 0.6em);
+                            transition: all 0.3s ease 0s;
+                            border: none;
+
+                            &:hover {
+                                background-color: rgb(255, 255, 255);
+                                letter-spacing: 0;
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .scrollList {
+                overflow-y: auto;
+            }
+        }
+
+        // Table
+    }
+}

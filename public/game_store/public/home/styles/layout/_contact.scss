@@ -1,0 +1,301 @@
+.contact {
+    position: relative;
+    padding: max(10vw, 10em) 0 0;
+
+    @media (max-width: 1375px) {
+        & {
+            padding: 0;
+        }
+    }
+
+    @media (max-width: 1110px) {
+        & {
+            padding: max(10vw, 10em) 0 0;
+        }
+    }
+
+    @media (max-width: 542px) {
+        & {
+            padding: max(2vw, 2em);
+        }
+    }
+
+    @media (max-width: 414px) {
+        & {
+            height: fit-content;
+            padding: max(10vw,10em) 0;
+        }
+    }
+    @media (max-width: 428px) {
+        & {
+            height: fit-content;
+            padding: max(10vw,10em) 0;
+        }
+    }
+
+    @media (max-width:384px) {
+        & {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+        }
+    }
+
+    @media (max-width:375px) {
+        & {
+            height: 140vh;
+        }
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 60vh;
+
+        @media (max-width: 1110px) {
+            & {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width:384px) {
+            & {
+                height: 100vh;
+            }
+        }
+
+        .titel_contact {
+            position: relative;
+
+            @media (max-width: 360px) {
+                & {
+                    width: 90%;
+                }
+            }
+            h1 {
+                font-size: max(4vw, 4em);
+                color: white;
+                width: 71%;
+
+                span {
+                    color: #00adb5;
+                }
+
+                @media (max-width: 1326px) {
+                    & {
+                        font-size: max(3vw, 3em);
+                    }
+                }
+
+                @media (max-width: 509px) {
+                    & {
+                        font-size: max(2vw, 2em);
+                    }
+                }
+
+            }
+
+            .rotet {
+                width: max(8vw, 8em);
+                height: max(9vw, 9em);
+                position: absolute;
+                left: 12%;
+                top: 33%;
+
+                @media (max-width: 441px) {
+                    & {
+                        left: 48%;
+                        top: 7%;
+                        rotate: 75deg;
+                    }
+                }
+            }
+
+            .coimgs {
+                width: fit-content;
+                margin: 0 0 0 max(11vw, 11em);
+
+                @media (max-width: 441px) {
+                    & {
+                        margin: 0;
+                    }
+                }
+
+                img {
+                    width: max(16vw, 16em);
+                }
+            }
+        }
+
+        .alllbro {
+            position: relative;
+
+            .z0 {
+                width: max(8vw, 8em);
+                height: max(9vw, 9em);
+                position: absolute;
+                left: -20%;
+                top: -20%;
+
+                @media (max-width: 542px) {
+                    & {
+                        left: -2%;
+                        top: -26%;
+                    }
+                }
+
+                @media (max-width:384px) {
+                    & {
+                        display: none;
+                    }
+                }
+            }
+
+            .form-contact {
+                background: rgba(0, 0, 0, 0.371);
+                border: 3px solid #00adb5;
+                box-shadow: -10px 0px 44px -8px #00adb5;
+                backdrop-filter: blur(3px);
+                border-radius: max(1vw, 1em);
+                padding: max(2vw, 2em) max(2vw, 2em) max(1vw, 1em);
+
+                @media (max-width: 542px) {
+                    & {
+                        width: 100%;
+                        margin: 0 auto;
+                    }
+                }
+                @media (max-width: 542px) {
+                    & {
+                        width: 100%;
+                        margin: 0 auto;
+                    }
+                }
+
+                @media (max-width:384px) {
+                    & {
+                        padding: max(2vw, 2em) max(1vw, 1em) max(1vw, 1em);
+                    }
+                }
+
+                form {
+                    .total {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        padding: 0px;
+                        gap: max(0.4vw, 0.4em);
+                        padding-bottom: max(1vw, 1em);
+
+                        h1 {
+                            color: white;
+                            font-size: max(1vw, 1em);
+                        }
+
+                        input {
+                            width: 453px;
+                            height: 41px;
+                            background: rgba(57, 62, 70, 0.5);
+                            border-radius: max(0.3vw, 0.3em);
+                            border: none;
+                            transition: 0.3s;
+                            color: white;
+
+                            @media (max-width: 542px) {
+                                & {
+                                    width: 85vw;
+                                }
+                            }
+
+                            &::placeholder {
+                                font-weight: 500;
+                                color: #777;
+                                padding-left: max(1vw, 1em);
+                                font-size: max(1vw, 1em);
+                                transition: 0.3s;
+                            }
+
+                            &:focus {
+                                outline: 1;
+                                padding: max(0.9vw, 0.9em) max(0.9vw, 0.9em);
+                                color: white;
+                            }
+
+                            &:focus::placeholder {
+                                color: transparent;
+                            }
+                        }
+
+                        textarea {
+                            resize: none;
+                            width: 100%;
+                            height: 50px;
+                            background: rgba(57, 62, 70, 0.5);
+                            border-radius: max(0.3vw, 0.3em);
+                            border: none;
+                            transition: 0.3s;
+                            color: white;
+
+                            @media (max-width: 542px) {
+                                & {
+                                    width: 85vw;
+                                }
+                            }
+
+                            &::placeholder {
+                                font-weight: 500;
+                                color: #777;
+                                padding-left: max(1vw, 1em);
+                                font-size: max(1vw, 1em);
+                                transition: 0.3s;
+                            }
+
+                            &:focus {
+                                outline: 1;
+                                padding: max(0.9vw, 0.9em) max(0.9vw, 0.9em);
+                                color: white;
+                            }
+
+                            &:focus::placeholder {
+                                color: transparent;
+                            }
+                        }
+                    }
+
+                    .submitt {
+                        background-color: #00adb5;
+                        padding: max(0.3vw, 0.3em) max(1vw, 1em);
+                        border-radius: max(1vw, 1em);
+                        width: fit-content;
+                        margin: max(1vw, 1em) 0 0;
+                        cursor: pointer;
+
+                        input {
+                            background-color: transparent;
+                            border: none;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            .z1 {
+                width: max(8vw, 8em);
+                height: max(9vw, 9em);
+                position: absolute;
+                left: 71%;
+                bottom: -20%;
+
+                @media (max-width: 500px) {
+                    & {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

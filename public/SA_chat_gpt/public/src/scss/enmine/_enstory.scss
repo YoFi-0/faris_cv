@@ -1,0 +1,174 @@
+::-webkit-scrollbar {
+    width: .3rem;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(83deg, #EE17BF 3.25%, #6410EE 89.41%);
+    border-radius: 10%;
+}
+
+.change-button{
+    direction: rtl;
+    position: absolute;
+    left: 117px;
+    background-color: transparent;
+    border: none;
+    padding: max(.7vw,0.7em) max(1vw,1em);
+    color: white;
+    background: linear-gradient(90deg, #824DE3 0%, #F856E9 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(255, 255, 255, 0.25), inset 0px -4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: max(1vw, 1em);
+    padding: max(.5vw, .5em);
+    border-radius: max(.3vw,0.3em);
+    top: -70px;
+    font-size: max(1vw, 1em);
+    cursor: pointer;
+    .icon{
+        color: #FFF;
+        font-size: max(1vw, 1em);
+        margin-right: max(0.5vw, 0.5em);
+    }
+}
+
+%enstory  {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    padding-bottom: max(2vw,2em);
+    top: 0;
+    overflow: auto;
+
+    .backgr {
+        position: fixed;
+        top: 0;
+        left: max(-20vw, -20em);
+        width: 140%;
+        height: 120vh;
+        user-select: none;
+        z-index: -10;
+    }
+
+    .container {
+        width: 100%;
+        height: 100vh;
+        padding: max(7vw, 7em) 0 0 0;
+
+        .taitel-content {
+            display: flex;
+            justify-content: space-around;
+            height: 50vh;
+            align-items: start;
+
+            .name {
+                z-index: 100;
+                position: relative;
+
+                h1 {
+                    font-size: max(3vw, 3em);
+                    color: white;
+                    width: max(18vw, 18em);
+                    line-height: .9;
+                }
+
+                .totoril {
+                    display: flex;
+                    flex-direction: column;
+                    width: fit-content;
+
+                    p {
+                        color: white;
+                        display: flex;
+                        flex-direction: column;
+                        font-size: max(1.3vw, 1.3em);
+                        padding-top: max(2.7vw, 2.7em);
+                        max-width: -moz-fit-content;
+                        max-width: fit-content;
+                    }
+
+                    span {
+                        position: relative;
+                        font-size: max(0.9vw, 0.9em);
+                        margin-left: max(4vw, 4em);
+                        margin-top: max(0.5vw, 0.5em);
+                        max-width: max(25vw, 25em);
+                        color: #fff;
+
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            top: 62px;
+                            left: 0;
+                            width: 100%;
+                            height: 10px;
+                            box-shadow: 0px 0px 13px rgba(100, 16, 238, 0.51);
+                            background: linear-gradient(83deg, #EE17BF 3.25%, #6410EE 89.41%);
+                            border-radius: max(5vw, 5em);
+                        }
+                    }
+                }
+            }
+        }
+
+        img {
+            position: relative;
+            z-index: 100;
+            width: 23vw;
+        }
+
+
+        .rodMab_Continer {
+            z-index: 100;
+            position: relative;
+            color: white;
+            .text-rigt {
+                width: 90%;
+                font-size: max(1vw,1em);
+                margin: 0 auto;
+
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    left: 60px;
+                    width: 0.6%;
+                    height: 100%;
+                    box-shadow: 0px 0px 13px rgba(100, 16, 238, 0.51);
+                    background: linear-gradient(294deg, #EE17BF 3.25%, #6410EE 89.41%);
+                    border-radius: max(5vw, 5em);
+                }
+            }
+        }
+
+        .leftMab_Continer {
+            z-index: 100;
+            position: relative;
+            color: white;
+            margin: max(4vw, 4em) 0;
+
+            .text-left {
+                width: 90%;
+                font-size: max(1vw,1em);
+                margin: 0 auto;
+
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    right: 60px;
+                    width: 0.6%;
+                    height: 100%;
+                    box-shadow: 0px 0px 13px rgba(100, 16, 238, 0.51);
+                    background: linear-gradient(294deg, #EE17BF 3.25%, #6410EE 89.41%);
+                    border-radius: max(5vw, 5em);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,468 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: #2C2C2C;
+  overflow: hidden;
+}
+
+.login {
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  background: #1c1c1c;
+  box-shadow: max(0vw, 0em) max(-2vw, -1em) max(2vw, 2em) max(-1vw, -1em);
+  border-radius: max(0.4vw, 0.4em);
+  padding: max(3vw, 3em) max(3vw, 3em) max(2vw, 2em);
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1040px) {
+  .login {
+    width: 60%;
+  }
+}
+@media (max-width: 1040px) and (max-width: 690px) {
+  .login {
+    width: 80%;
+  }
+}
+@media (max-width: 1040px) and (max-width: 500px) {
+  .login {
+    width: 95%;
+  }
+}
+.login h2 {
+  color: #00ce79;
+  font-size: max(2vw, 2em);
+}
+.login h1 {
+  color: rgba(255, 255, 255, 0.7294117647);
+  margin-top: max(0.5vw, 0.5em);
+  margin-bottom: max(2vw, 2em);
+  font-size: max(1.5vw, 1.5em);
+}
+.login .back {
+  display: block;
+  position: absolute;
+  top: max(0.5vw, 0.5em);
+  left: max(0.5vw, 0.5em);
+  font-size: max(1.9vw, 1.9em);
+  border-radius: max(10vw, 10em);
+  color: #fff;
+  transition: ease 0.3s;
+}
+.login .back i {
+  transition: ease 0.3s;
+}
+.login .back:hover i {
+  transform: translateX(-10px) scale(0.9);
+  color: #00ce79;
+}
+.login .login-container {
+  overflow: hidden;
+  background-color: #2c2c2c;
+  padding: max(1vw, 1em);
+  border-radius: max(0.4vw, 0.4em) max(0.4vw, 0.4em) max(0vw, 0em) max(0vw, 0em);
+  position: relative;
+  justify-self: center;
+  margin: 0 auto;
+  width: 100%;
+}
+.login .login-container .Log {
+  color: #00ce79;
+  padding: max(0vw, 0em) max(0vw, 0em) max(1vw, 1em);
+  font-size: max(2vw, 2em);
+  width: 100%;
+  font-weight: bolder;
+}
+.login .login-container .Log span {
+  color: white;
+  font-weight: 500;
+  font-size: max(0.6vw, 0.6em);
+}
+@media (max-width: 470px) {
+  .login .login-container .Log {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.login .login-container .AllForm {
+  position: relative;
+}
+.login .login-container .AllForm p {
+  display: flex;
+  align-items: center;
+}
+.login .login-container .AllForm p input {
+  position: relative;
+  border: 1px solid transparent;
+  margin: max(1vw, 1em) max(0vw, 0em);
+  background-color: rgba(203, 203, 203, 0);
+  border-radius: 0px;
+  padding: max(0.9vw, 0.9em) max(0vw, 0em);
+  border-bottom: max(0.1vw, 0.1em) solid #00ce79;
+  display: block;
+  width: 100%;
+  transition: 0.3s;
+  color: #fff;
+  user-select: none;
+}
+.login .login-container .AllForm p i {
+  margin-left: max(-1.6vw, -1.6em);
+  cursor: pointer;
+  color: rgb(0, 206, 121);
+  font-size: max(1vw, 1em);
+  z-index: 0;
+}
+@media (max-width: 1194px) {
+  .login .login-container .AllForm p i {
+    margin-left: max(-2.6vw, -2.6em);
+  }
+}
+@media (max-width: 1194px) and (max-width: 930px) {
+  .login .login-container .AllForm p i {
+    margin-left: -25px;
+  }
+}
+.login .login-container .AllForm p input::placeholder {
+  font-weight: 500;
+  color: white;
+  font-size: max(1vw, 1em);
+  transition: 0.3s;
+  user-select: none;
+}
+.login .login-container .AllForm p input:focus {
+  outline: 1;
+  padding: max(0.9vw, 0.9em) max(0.9vw, 0.9em);
+}
+.login .login-container .AllForm p input:focus::placeholder {
+  color: transparent;
+}
+.login .login-container .AllForm .For {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: max(1vw, 1em) max(0vw, 0em);
+  gap: max(1vw, 1em);
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.login .login-container .AllForm .For p:first-child,
+.login .login-container .AllForm .For a:last-child {
+  cursor: pointer;
+  color: #00ce79;
+  font-size: max(1vw, 1em);
+}
+.login .login-container .AllForm .button {
+  display: flex;
+  width: 100%;
+  padding: max(1vw, 1em) max(0vw, 0em);
+  gap: max(2vw, 2em);
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  user-select: none;
+}
+.login .login-container .AllForm .button input {
+  background-color: #00ce79;
+  user-select: none;
+}
+.login .login-container .AllForm .button a:first-child,
+.login .login-container .AllForm .button input:last-child {
+  background-color: #00ce79;
+  color: black;
+  font-weight: bold;
+  border-radius: max(0.2vw, 0.2em);
+  font-size: max(1vw, 1em);
+  padding: max(1vw, 1em) max(0.8vw, 0.8em);
+  text-align: center;
+  width: fit-content;
+  transition: 0.3s;
+  border: none;
+}
+@media (max-width: 470px) {
+  .login .login-container .AllForm .button a:first-child .button a:first-child,
+.login .login-container .AllForm .button a:first-child .button input:last-child,
+.login .login-container .AllForm .button input:last-child .button a:first-child,
+.login .login-container .AllForm .button input:last-child .button input:last-child {
+    font-size: 8px;
+  }
+}
+.login .login-container .AllForm .button input:last-child:hover {
+  background-color: rgba(0, 206, 120, 0.7647058824);
+  cursor: pointer;
+}
+@media (max-width: 470px) {
+  .login .login-container .AllForm .For,
+.login .login-container .AllForm .button {
+    font-size: 11px;
+    padding: 12px 1px 0px;
+  }
+}
+.login .createAccount {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #1c1c1c;
+  box-shadow: inset 0 0 10px -4px #00ce79;
+  padding: max(1vw, 1em);
+  border-radius: max(10.4vw, 0.4em) max(0.4vw, 0.4em) max(0.4vw, 0.4em) max(10.4vw, 0.4em);
+  justify-self: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.login .createAccount .creAcc {
+  color: white;
+  font-size: max(2vw, 2em);
+  padding: max(0vw, 0em) max(0vw, 0em) max(0.5vw, 0.5em);
+  text-align: center;
+}
+@media (max-width: 1282px) {
+  .login .createAccount .creAcc {
+    font-size: max(1.7vw, 1.7em);
+  }
+}
+@media (max-width: 1282px) and (max-width: 1130px) {
+  .login .createAccount .creAcc {
+    font-size: max(1.4vw, 1.4em);
+  }
+}
+.login .createAccount .creAcc span {
+  color: #00ce79;
+  font-weight: bold;
+}
+.login .createAccount .create .allform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.login .createAccount .create .allform input {
+  border: 1px solid transparent;
+  margin: max(1vw, 1em) max(0vw, 0em);
+  background-color: rgba(203, 203, 203, 0);
+  border-radius: 0px;
+  padding: max(0.9vw, 0.9em) max(0vw, 0em);
+  border-bottom: max(0.1vw, 0.1em) solid #00ce79;
+  display: block;
+  width: 90%;
+  transition: 0.3s;
+  color: #fff;
+  user-select: none;
+}
+.login .createAccount .create .allform input::placeholder {
+  font-weight: 500;
+  color: white;
+  font-size: max(1vw, 1em);
+  transition: 0.3s;
+  user-select: none;
+}
+.login .createAccount .create .allform input:focus {
+  outline: 0;
+  padding: max(0.9vw, 0.9em) max(0.9vw, 0.9em);
+}
+.login .createAccount .create .allform input:focus::placeholder {
+  color: transparent;
+}
+.login .createAccount .create .allform .inputBox {
+  position: relative;
+  width: 91%;
+  padding: 5px;
+}
+.login .createAccount .create .allform .inputBox #Mathe_1 {
+  background-color: rgba(203, 203, 203, 0);
+  border-radius: 0px;
+  padding: max(0.9vw, 0.9em) max(0vw, 0em);
+  border-bottom: max(0.1vw, 0.1em) solid #00ce79;
+  display: block;
+  width: 100%;
+  color: #fff;
+  margin: 0 auto;
+  user-select: none;
+}
+.login .createAccount .create .allform .inputBox #Mathe_1::placeholder {
+  font-weight: 500;
+  color: white;
+  font-size: max(1vw, 1em);
+  transition: 0.3s;
+  user-select: none;
+}
+.login .createAccount .create .allform .inputBox #Mathe_1:focus {
+  outline: 0;
+  padding: max(0.9vw, 0.9em) max(0.9vw, 0.9em);
+}
+.login .createAccount .create .allform .inputBox #Mathe_1:focus::placeholder {
+  color: transparent;
+}
+.login .createAccount .create .allform .inputBox #toggl {
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  color: #00ce79;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login .createAccount .create .allform .inputBox #toggl::before {
+  content: "\f070";
+  font-family: fontAwesome;
+  font-size: max(1.3vw, 1.3em);
+}
+.login .createAccount .create .allform .inputBox #toggl.hide::before {
+  content: "\f06e";
+}
+.login .createAccount .create .validation {
+  width: 100%;
+}
+.login .createAccount .create .validation ul {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: center;
+  padding: 0 0 0 max(2vw, 2em);
+}
+.login .createAccount .create .validation ul .left {
+  width: 100%;
+}
+.login .createAccount .create .validation ul .left li {
+  position: relative;
+  list-style: none;
+  color: white;
+  transition: 0.5s;
+  font-size: max(1vw, 1em);
+  transition: ease 0.5s;
+  user-select: none;
+}
+.login .createAccount .create .validation ul .left li.valid {
+  color: rgbe(255, 255, 255, 0.5);
+  transition: ease 0.5s;
+}
+.login .createAccount .create .validation ul .left li.valid::before {
+  content: "\f058";
+  color: #00ce79;
+}
+.login .createAccount .create .validation ul .left li::before {
+  content: "\f192";
+  width: 20px;
+  height: 20px;
+  padding-right: max(0.1vw, 0.1em);
+  padding-bottom: max(0.1vw, 0.1em);
+  font-family: fontAwesome;
+  display: inline-flex;
+}
+.login .createAccount .create .validation ul .right {
+  width: 100%;
+}
+.login .createAccount .create .validation ul .right li {
+  position: relative;
+  list-style: none;
+  color: white;
+  transition: 0.5s;
+  font-size: max(1vw, 1em);
+  user-select: none;
+}
+.login .createAccount .create .validation ul .right li.valid {
+  color: rgbe(255, 255, 255, 0.5);
+}
+.login .createAccount .create .validation ul .right li.valid::before {
+  content: "\f058";
+  color: #00ce79;
+}
+.login .createAccount .create .validation ul .right li::before {
+  content: "\f192";
+  width: 20px;
+  height: 20px;
+  padding-right: max(0.1vw, 0.1em);
+  padding-bottom: max(0.1vw, 0.1em);
+  font-family: fontAwesome;
+  display: inline-flex;
+}
+.login .createAccount .create .loginAcc {
+  text-align: left;
+  margin: max(1vw, 1em) auto 0 max(2vw, 2em);
+}
+.login .createAccount .create .loginAcc p {
+  width: fit-content;
+  color: #00ce79;
+  font-size: max(1vw, 1em);
+  cursor: pointer;
+  user-select: none;
+}
+.login .createAccount .create .button {
+  text-align: end;
+  width: 100%;
+}
+.login .createAccount .create .button input {
+  padding: max(1vw, 1em) max(1vw, 1em);
+  border-radius: max(0.4vw, 0.4em);
+  background-color: #00ce79;
+  font-size: max(1vw, 1em);
+  font-weight: bold;
+}
+@media (max-width: 1698px) {
+  .login .createAccount .create .button input {
+    padding: max(0.8vw, 0.8em) max(0.9vw, 0.9em);
+  }
+}
+
+.appearance {
+  position: relative;
+  transition: 0.3s;
+}
+.appearance::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  z-index: -100;
+  height: 500px;
+  background-color: transparent;
+  border-radius: 50%;
+  top: -176px;
+  border: 150px solid #00ce79;
+  right: 203px;
+  transition: 0.3s;
+}
+@media (max-width: 829px) {
+  .appearance::before::before {
+    width: 400px;
+    height: 400px;
+    top: -346px;
+    right: -270px;
+  }
+}
+.appearance::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  z-index: -100;
+  height: 500px;
+  background-color: transparent;
+  border-radius: 50%;
+  top: 300px;
+  border: 150px solid #00ce79;
+  left: 150px;
+  transition: 0.3s;
+}
+
+/*# sourceMappingURL=login.css.map */

@@ -1,0 +1,72 @@
+
+@use "./enwelc.scss";
+@use "./enstory.scss";
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Sans Arabic', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    background-color: black;
+    font-weight: bold;
+    // overflow: hidden;
+}
+
+.loding-corner{
+    margin: max(1vw, 1em);
+    transition: 1s;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+    user-select: none;
+    top: 0;
+    left: 0;
+    width: max(3em, 3vw);
+    height: max(3em, 3vw);
+    border-style: solid none none solid;
+    border-color: #FFF;
+    border-width: max(0.2vw, 0.2em);
+    animation: loading 1s infinite;
+}
+
+@keyframes loading {
+    from{
+        rotate: 1deg;
+    } to {
+        rotate: 360deg;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+html::-webkit-scrollbar {
+    width: .5rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #834DE3;
+    border-radius: 10%;
+}
+
+.enwelcome {
+    @extend %enwelcome;
+}
+
+.enstory {
+    @extend %enstory;  
+}

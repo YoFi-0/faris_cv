@@ -1,0 +1,732 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+body {
+  max-width: 100vw;
+  scroll-behavior: smooth;
+  background: #ffffff;
+  font-family: "League Spartan", sans-serif;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  width: 0.2rem;
+  height: 0.6em;
+}
+body::-webkit-scrollbar-track {
+  background: white;
+}
+body::-webkit-scrollbar-thumb {
+  background: #d4b188;
+  border-radius: 2%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+@media (max-width: 632px) {
+  .container .experieces {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+.container .experieces .contint {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 1920px) {
+  .container .experieces .contint {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+@media (max-width: 1024px) {
+  .container .experieces .contint {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+@media (max-width: 800px) {
+  .container .experieces .contint {
+    overflow: hidden;
+  }
+}
+@media (max-width: 632px) {
+  .container .experieces .contint {
+    flex-direction: column;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+.container .experieces .contint .about {
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: max(1em, 1vw) max(4em, 4vw);
+}
+@media (max-width: 632px) {
+  .container .experieces .contint .about {
+    width: initial;
+    display: flex;
+    flex-direction: column;
+    margin: max(1em, 1vw) max(4em, 4vw);
+    align-items: center;
+    justify-content: center;
+  }
+}
+.container .experieces .contint .about img {
+  width: max(11em, 11vw);
+  height: max(11em, 11vw);
+  -o-object-fit: fill;
+     object-fit: fill;
+  border-radius: max(50em, 50vw);
+  border: 4px rgba(119, 119, 119, 0.4666666667);
+  border-style: dotted;
+}
+.container .experieces .contint .about h1 {
+  text-align: left;
+  color: #b4b4b4;
+  font-size: max(1em, 1vw);
+  width: -moz-max-content;
+  width: max-content;
+}
+.container .experieces .contint .about h1 span {
+  display: block;
+}
+.container .experieces .contint .experiences {
+  margin: max(1em, 1vw);
+  width: 100%;
+  margin-right: 0;
+}
+@media (max-width: 428px) {
+  .container .experieces .contint .experiences {
+    width: 96%;
+    margin-right: 0;
+    overflow: hidden;
+  }
+}
+.container .experieces .contint .experiences .taitel {
+  padding-top: 0;
+  margin-bottom: max(1em, 1vw);
+  margin-right: max(1em, 1vw);
+  text-align: end;
+  position: relative;
+}
+.container .experieces .contint .experiences .taitel::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 50%;
+  transform: translate(22%, -50%);
+  width: 112%;
+  border: 2px dashed #765407;
+  z-index: -1;
+}
+.container .experieces .contint .experiences .taitel h1 {
+  position: relative;
+  color: #d4b188;
+  font-size: max(1.3em, 1.3vw);
+  position: relative;
+  color: #d4b188;
+  font-weight: bold;
+  font-size: max(1.3em, 1.3vw);
+  width: -moz-fit-content;
+  width: fit-content;
+  background: white;
+  padding: 0 max(1em, 1vw);
+  z-index: 11;
+}
+.container .experieces .contint .experiences .projects {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.container .experieces .contint .experiences .projects:hover .projects-track {
+  animation-play-state: paused;
+  border-radius: max(1em, 1vw);
+}
+.container .experieces .contint .experiences .projects::before, .container .experieces .contint .experiences .projects::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 15%;
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 1;
+}
+.container .experieces .contint .experiences .projects::before {
+  left: 0;
+  top: 0;
+}
+.container .experieces .contint .experiences .projects::after {
+  right: 20%;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+@media (max-width: 632px) {
+  .container .experieces .contint .experiences .projects::after {
+    right: 0%;
+  }
+}
+.container .experieces .contint .experiences .projects .projects-track {
+  display: flex;
+  gap: max(1em, 1vw);
+  animation: scroll 40s linear infinite;
+}
+.container .experieces .contint .experiences .projects .projects-track .slide {
+  perspective: 100px;
+  display: flex;
+  align-items: center;
+  padding: max(1em, 1vw);
+}
+.container .experieces .contint .experiences .projects .projects-track .slide img {
+  width: max(12em, 12vw);
+  border-radius: max(0.4em, 0.4vw);
+  transition: transform 0.2s;
+}
+.container .experieces .contint .experiences .projects .projects-track .slide img:hover {
+  transform: translateZ(10px);
+  cursor: pointer;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.container .experieces .contint .experiences .projects {
+  display: flex;
+  gap: max(1em, 1vw);
+  overflow: auto;
+  flex-direction: row;
+  overflow: hidden;
+  padding: 0 max(1em, 1vw) max(0em, 0vw) 0;
+}
+.container .experieces .contint .experiences .projects img {
+  width: max(15em, 15vw);
+  border-radius: max(0.4em, 0.4vw);
+}
+.container .educations {
+  background-color: #1b1a1a;
+  height: 100vh;
+}
+.container .educations .contint {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 1920px) {
+  .container .educations .contint {
+    height: 70vh;
+  }
+}
+@media (min-width: 1920px) {
+  .container .educations .contint {
+    height: 73vh;
+  }
+}
+@media (max-width: 1280px) {
+  .container .educations .contint {
+    height: 75vh;
+  }
+}
+@media (max-width: 1180px) {
+  .container .educations .contint {
+    flex-direction: column;
+  }
+}
+.container .educations .contint .contintprofille {
+  position: relative;
+  padding: 0;
+  width: 50%;
+}
+@media (max-width: 1180px) {
+  .container .educations .contint .contintprofille {
+    width: 100%;
+  }
+}
+.container .educations .contint .contintprofille .dtels {
+  position: relative;
+  color: white;
+  padding: 0;
+  width: 49vw;
+  z-index: 1;
+}
+@media (max-width: 1180px) {
+  .container .educations .contint .contintprofille .dtels {
+    background-color: #1b1a1a;
+    width: 100vw;
+  }
+}
+.container .educations .contint .contintprofille .dtels .userName {
+  background: linear-gradient(90deg, #1b1a1a 0%, #1b1a1a 77.08%, #d4b188 100%);
+  padding: max(2em, 2vw);
+}
+@media (max-width: 1000px) {
+  .container .educations .contint .contintprofille .dtels .userName {
+    border-bottom: 2px solid #d4b188;
+  }
+}
+.container .educations .contint .contintprofille .dtels .userName::before {
+  position: absolute;
+  content: "";
+  top: -22%;
+  left: 0;
+  transform: rotate(90deg);
+  width: clamp(5vw, 10vw, 4em);
+  height: clamp(17vw, 38vw, 16em);
+  background-size: cover;
+  background-size: max(5em, 5vw);
+  background-image: url(img/image612.svg);
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+@media (max-width: 632px) {
+  .container .educations .contint .contintprofille .dtels .userName::before {
+    display: none;
+  }
+}
+.container .educations .contint .contintprofille .dtels .userName h5 {
+  color: #737373;
+  font-size: max(1em, 1vw);
+  margin-bottom: max(0.4em, 0.4vw);
+  margin-top: max(0.4em, 0.4vw);
+}
+.container .educations .contint .contintprofille .dtels .userName h1 {
+  color: #d4b188;
+  font-size: max(3em, 3vw);
+  line-height: 0.9;
+}
+.container .educations .contint .contintprofille .dtels .userName h1 span {
+  display: block;
+  color: white;
+}
+.container .educations .contint .contintprofille .dtels .myProfile {
+  position: relative;
+  padding-left: max(1em, 1vw);
+  padding-top: max(1em, 1vw);
+}
+.container .educations .contint .contintprofille .dtels .myProfile::before {
+  top: -20%;
+  background-image: url(img/image60.svg);
+  position: absolute;
+  content: "";
+  right: 0%;
+  width: clamp(27vw, 10vw, 26em);
+  height: clamp(5vw, 7vw, 5em);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+  background-size: max(27em, 27vw);
+}
+@media (max-width: 1440px) {
+  .container .educations .contint .contintprofille .dtels .myProfile::before {
+    width: clamp(30vw, 10vw, 26em);
+  }
+}
+@media (max-width: 1000px) {
+  .container .educations .contint .contintprofille .dtels .myProfile::before {
+    display: none;
+  }
+}
+.container .educations .contint .contintprofille .dtels .myProfile h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  color: #d4b188;
+  font-size: max(1.6em, 1.6vw);
+}
+.container .educations .contint .contintprofille .dtels .myProfile p {
+  margin-left: max(1em, 1vw);
+  padding-bottom: max(1.4em, 1.4vw);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.562);
+  width: clamp(32em, 50vw, 20em);
+  font-size: max(0.8em, 0.8vw);
+}
+@media (max-width: 414px) {
+  .container .educations .contint .contintprofille .dtels .myProfile p {
+    width: 93vw;
+  }
+}
+.container .educations .contint .contintprofille .dtels .mySkills {
+  padding-top: max(1em, 1vw);
+  z-index: 3;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+.container .educations .contint .contintprofille .dtels .mySkills h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  color: #d4b188;
+  font-size: max(1.6em, 1.6vw);
+  padding-left: max(1em, 1vw);
+}
+.container .educations .contint .contintprofille .dtels .mySkills p {
+  margin-left: max(1em, 1vw);
+  padding-bottom: max(2em, 2vw);
+  font-size: max(1em, 1vw);
+  width: 34rem;
+}
+.container .educations .contint .contintprofille .dtels .mySkills .SkillEffect {
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.container .educations .contint .contintprofille .dtels .mySkills .SkillEffect:hover .Skill-track {
+  animation-play-state: paused;
+}
+.container .educations .contint .contintprofille .dtels .mySkills .SkillEffect::before, .container .educations .contint .contintprofille .dtels .mySkills .SkillEffect::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 15%;
+  background: linear-gradient(to right, rgb(27, 26, 26) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 1;
+}
+.container .educations .contint .contintprofille .dtels .mySkills .SkillEffect::before {
+  left: 0;
+  top: 0;
+}
+.container .educations .contint .contintprofille .dtels .mySkills .SkillEffect::after {
+  right: 0%;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.container .educations .contint .contintprofille .dtels .mySkills .SkillEffect .Skill-track {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: max(1em, 1vw);
+  animation: scrol 20s linear infinite;
+}
+.container .educations .contint .contintprofille .dtels .mySkills .SkillEffect .Skill-track .skill {
+  display: flex;
+  align-items: center;
+  padding: max(1em, 1vw);
+}
+.container .educations .contint .contintprofille .dtels .mySkills .SkillEffect .Skill-track .skill img {
+  width: max(7.3em, 7.3vw);
+}
+@keyframes scrol {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+.container .educations .contint .myeduation {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.container .educations .contint .myeduation .eduation {
+  background-color: white;
+  position: relative;
+}
+@media (max-width: 1180px) {
+  .container .educations .contint .myeduation .eduation {
+    position: unset;
+    margin-top: max(2em, 2vw);
+  }
+}
+.container .educations .contint .myeduation .eduation .taitel {
+  padding-top: 0;
+  margin-bottom: max(1em, 1vw);
+  margin-right: max(1em, 1vw);
+  text-align: end;
+  position: relative;
+  top: -10px;
+}
+@media (max-width: 1180px) {
+  .container .educations .contint .myeduation .eduation .taitel {
+    top: 0;
+    margin-top: max(1em, 1vw);
+  }
+}
+.container .educations .contint .myeduation .eduation .taitel::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  transform: translate(0%, -50%);
+  width: 79%;
+  border: 2px dashed #765407;
+  z-index: 1;
+}
+@media (max-width: 1180px) {
+  .container .educations .contint .myeduation .eduation .taitel::before {
+    width: 87vw;
+  }
+}
+@media (max-width: 428px) {
+  .container .educations .contint .myeduation .eduation .taitel::before {
+    width: 55vw;
+  }
+}
+.container .educations .contint .myeduation .eduation .taitel h1 {
+  position: relative;
+  color: #d4b188;
+  font-weight: bold;
+  font-size: max(1.3em, 1.3vw);
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 0 0 auto;
+  background: white;
+  padding: 0 max(1em, 1vw);
+  z-index: 11;
+}
+.container .educations .contint .myeduation .eduation .continNonf {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: max(0.1em, 0.1vw);
+  overflow: auto;
+  max-height: 50vh;
+}
+@media (max-width: 1280px) {
+  .container .educations .contint .myeduation .eduation .continNonf {
+    gap: max(0.1em, 0.1vw);
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    max-height: 50vh;
+  }
+}
+@media (max-width: 1180px) {
+  .container .educations .contint .myeduation .eduation .continNonf {
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+  }
+}
+.container .educations .contint .myeduation .eduation .continNonf::-webkit-scrollbar {
+  width: 0.2rem;
+  height: 0.6em;
+}
+.container .educations .contint .myeduation .eduation .continNonf::-webkit-scrollbar-track {
+  background: white;
+}
+.container .educations .contint .myeduation .eduation .continNonf::-webkit-scrollbar-thumb {
+  background: #d4b188;
+  border-radius: 2%;
+}
+.container .educations .contint .myeduation .eduation .continNonf .Nonfiction {
+  padding: max(1em, 1vw);
+  padding-top: 0;
+  width: 49%;
+}
+@media (max-width: 1280px) {
+  .container .educations .contint .myeduation .eduation .continNonf .Nonfiction {
+    width: 100%;
+  }
+}
+.container .educations .contint .myeduation .eduation .continNonf .Nonfiction h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: max(0.8em, 0.8vw);
+  color: #b4b4b3;
+}
+.container .educations .contint .myeduation .eduation .continNonf .Nonfiction h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  font-size: max(1em, 1vw);
+  color: #000000;
+}
+.container .educations .contint .myeduation .eduation .continNonf .Nonfiction h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  font-size: max(1em, 1vw);
+  color: #000000;
+}
+.container .educations .contint .myeduation .eduation .continNonf .Nonfiction p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: max(0.8em, 0.8vw);
+  color: #000000;
+}
+.container .educations .contint .myeduation .eduation .continNonf .Nonfiction .rowFull {
+  width: 45vw;
+}
+@media (max-width: 1280px) {
+  .container .educations .contint .myeduation .eduation .continNonf .Nonfiction .rowFull {
+    width: 100%;
+  }
+}
+.container .educations .contint .myeduation footer {
+  bottom: 0;
+  color: white;
+  padding: max(2em, 2vw);
+  padding-bottom: 0;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  font-size: max(1em, 1vw);
+}
+@media (max-width: 1180px) {
+  .container .educations .contint .myeduation footer {
+    background-color: #1b1a1a;
+  }
+}
+.container .educations .contint .myeduation footer .sochel {
+  display: flex;
+  flex-direction: column;
+}
+.container .educations .contint .myeduation footer .sochel a {
+  font-size: max(1em, 1vw);
+  padding-bottom: max(0.4em, 0.4vw);
+  display: block;
+}
+.container .educations .contint .myeduation footer .sochel h1 {
+  padding-bottom: max(0.4em, 0.4vw);
+  font-size: max(1em, 1vw);
+}
+.container .educations .contint .myeduation footer .sochel .main {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  background-color: rgb(240, 240, 240);
+}
+.container .educations .contint .myeduation footer .sochel .wrapper {
+  display: flex;
+}
+.container .educations .contint .myeduation footer .sochel .wrapper .button {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 0 max(0.4em, 0.4vw);
+  overflow: hidden;
+  background: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-out;
+}
+.container .educations .contint .myeduation footer .sochel .wrapper .button:hover {
+  width: 200px;
+}
+.container .educations .contint .myeduation footer .sochel .wrapper .button .icon {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  border-radius: max(50em, 50vw);
+  box-sizing: border-box;
+  color: #495057;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+.container .educations .contint .myeduation footer .sochel .wrapper .button:nth-child(1):hover .icon {
+  background: #495057;
+}
+.container .educations .contint .myeduation footer .sochel .wrapper .button:nth-child(2):hover .icon {
+  background: #1da1f2;
+}
+.container .educations .contint .myeduation footer .sochel .wrapper .button:nth-child(3):hover .icon {
+  background: #e1306c;
+}
+.container .educations .contint .myeduation footer .sochel .wrapper .button:nth-child(4):hover .icon {
+  background: #5865f2;
+}
+.container .educations .contint .myeduation footer .sochel .wrapper .button:nth-child(5):hover .icon {
+  background: #ff0000;
+}
+.container .educations .contint .myeduation footer .sochel .wrapper .button .icon i {
+  font-size: 25px;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+.container .educations .contint .myeduation footer .sochel .wrapper .button:hover .icon i {
+  color: #fff;
+}
+.container .educations .contint .myeduation footer .sochel .wrapper .button span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+.container .educations .contint .myeduation footer .sochel .wrapper .button:nth-child(1) span {
+  color: #495057;
+}
+.container .educations .contint .myeduation footer .sochel .wrapper .button:nth-child(2) span {
+  color: #1da1f2;
+}
+.container .educations .contint .myeduation footer .sochel .wrapper .button:nth-child(3) span {
+  color: #e1306c;
+}
+.container .educations .contint .myeduation footer .sochel .wrapper .button:nth-child(4) span {
+  color: #5865f2;
+}
+.container .educations .contint .myeduation footer .sochel .wrapper .button:nth-child(5) span {
+  color: #ff0000;
+}
+
+circle {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 427;
+  animation: ani 2s linear forwards;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes ani {
+  100% {
+    stroke-dashoffset: 94.4;
+  }
+}
+.circleCss {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 427;
+  animation: css 2s linear forwards;
+}
+
+@keyframes css {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+.circleJs {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 427;
+  animation: js 2s linear forwards;
+}
+
+@keyframes js {
+  100% {
+    stroke-dashoffset: 269.04;
+  }
+}/*# sourceMappingURL=style.css.map */

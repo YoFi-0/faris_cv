@@ -1,0 +1,67 @@
+// @import url(./_arabstory.scss);
+// @import url(./_arabwelc.scss);
+
+
+@use "./arabwelc";
+@use "./arabstory";
+
+
+.loding-corner{
+    position: absolute;
+    opacity: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    color: white;
+    font-size: max(4vw,4em);
+}
+
+
+* {
+    direction: rtl;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    direction: rtl;
+    font-family: 'Noto Sans Arabic', sans-serif;
+    background-color: black;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+html::-webkit-scrollbar {
+    width: .5rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #834DE3;
+    border-radius: 10%;
+}
+
+.arabwelcome {
+    @extend %arabwelcome;
+}
+
+.arabstory {
+    @extend %arabstory;  
+}

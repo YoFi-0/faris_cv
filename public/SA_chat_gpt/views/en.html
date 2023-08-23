@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imaginary</title>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=N3mnIzUO"></script>
+
+    <!-- all.min.css -->
+    <link rel="stylesheet" href="../public/src/css/all.min.css">
+    <!-- style.css -->
+    <link rel="stylesheet" href="../public/src/scss/enmine/en.css">
+    <!-- Font-Googel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="loding-corner"></div>
+    <div id="pop" class="popapConfirm">
+        <div class="containet" id="cmplete_story">
+            <h1>Complete Story</h1>
+
+            <li><button id="byMe"> <i class="fab fa-creative-commons-by" ></i> By Me</button></li>
+            <li><button id="byAi"> <i class="fas fa-fist-raised"></i> By Ai</button></li>
+
+        </div>
+
+        <div class="containet" id="EditByAi">
+            <h1>AI compliter</h1>
+
+            <form id="InputPopForm_complite" class="popForm">
+                <input class="input about"  type="text" placeholder="text by Ai">
+                <p>charchter:</p>
+                <input type="text" class="c_name" placeholder="Name">
+                <input type="text" class="c_features" placeholder="features">
+                <input type="text" class="c_Gender" placeholder="Gender">
+                <input class="submit done" value="confierm" type="button">
+            </form>
+
+        </div>
+
+
+        <div class="containet" id="Ai_Ender">
+            <h1>Ai Ender</h1>
+
+            <form id="InputEndStory" class="popForm">
+                <input class="input about" type="text" placeholder="text by Ai">
+                <input class="submit done" value="confierm" type="button">
+            </form>
+
+        </div>
+        <div class="containet" id="cmplete_Edit">
+            <h1>AI Editor</h1>
+
+            <form id="Input_Ai_Edetor" class="popForm">
+                <input class="input about" type="text" placeholder="text by Ai">
+                <input class="submit done" value="confierm" type="button">
+
+                <input type="hidden" id="last_story_sender">
+                <input type="hidden" id="targted_p">
+            </form>
+
+        </div>
+        <i id="clospopap" class="fas fa-times"></i>
+    </div>
+    <header>
+        <div class="nav">
+            <div class="continer">
+
+                <div class="icons">
+                    <details id="detai" class="custom-select">
+                        <summary id="summ" class="radios">
+                            <input type="radio" name="item" id="default" title="All Story" checked>
+                            <input type="radio" name="item" id="item1" title="Item 1">
+                            <input type="radio" name="item" id="item2" title="Item 2">
+                            <input type="radio" name="item" id="item3" title="Item 3">
+                            <input type="radio" name="item" id="item4" title="Item 4">
+                            <input type="radio" name="item" id="item5" title="Item 5">
+                        </summary>
+                        <ul id="ItemSumm" class="list">
+                            <li>
+                                <label for="item1">section 1</label>
+                            </li>
+                            <li>
+                                <label for="item2">section 2</label>
+                            </li>
+                            <li>
+                                <label for="item3">section 3</label>
+                            </li>
+                            <li>
+                                <label for="item4">section 4</label>
+                            </li>
+                            <li>
+                                <label for="item5">section 5</label>
+                            </li>
+                        </ul>
+                    </details>
+
+                    <i id="volume" class="fa-solid fa-volume-high"></i>
+                    <i class="fa-solid fa-microphone"></i>
+
+                    <li><button  id="comple">Complete Story</button></li>
+                    <li><button id="endStory">End Story</button></li>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="soso">
+        <span class="z1" style="--i:1;"> </span>
+        <span class="z2" style="--i:2;"> </span>
+        <span class="z3" style="--i:3;"> </span>
+        <span class="z4" style="--i:4;"> </span>
+        <span class="z5" style="--i:5;"> </span>
+        <span class="z6" style="--i:6;"> </span>
+        <span class="z7" style="--i:7;"> </span>
+        <span class="z8" style="--i:8;"> </span>
+        <span class="z9" style="--i:9;"> </span>
+        <span class="z10" style="--i:10;"> </span>
+        <span class="z11" style="--i:11;"> </span>
+        <span class="z12" style="--i:12;"> </span>
+        <span class="z13" style="--i:13;"> </span>
+        <span class="z14" style="--i:14;"> </span>
+        <span class="z15" style="--i:15;"> </span>
+        <span class="z16" style="--i:16;"> </span>
+        <span class="z17" style="--i:17;"> </span>
+        <span class="z18" style="--i:18;"> </span>
+        <span class="z19" style="--i:19;"> </span>
+    </div>
+
+
+    <div id="popapver" class="popap">
+        <div class="overFlo"></div>
+        <div class="containet">
+
+            <div class="l-form">
+                <form class="form">
+                    <i id="closs" class="fas fa-times"></i>
+
+                    <div class="right">
+                        <div class="form__div">
+                            <input id="characters_input" type="text"  class="form__input i_create_title" placeholder=" ">
+                            <label for="characters_input" class="form__label">Story title</label>
+                        </div>
+                        <div class="bot11">
+                            <button type="button" id="create_characters_btn">Characters</button>
+                        </div>
+                    </div>
+
+                    <div class="charcters_inputs">
+                        <!-- <div class="singel_ch">
+                            <div class="single_input">
+                                <label>Name</label>
+                                <input type="text">
+                            </div>
+                            <div class="single_input">
+                                <label>features</label>
+                                <input type="text">
+                            </div>
+                            <div class="single_input">
+                                <label>Gender</label>
+                                <input type="text">
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <div class="left">
+                        <div class="form__div">
+                            <input id="about_input" type="text" class="form__input i_create_about" placeholder=" ">
+                            <label for="about_input" class="form__label">about the story</label>
+                        </div>
+                        <div class="bot22">
+                            <button type="button" id="create_story_button">create</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="enwelcome" style="display: block;">
+        <div class="container">
+
+            <div class="section">
+                <span class="befoer"></span>
+                <div class="hello">
+                    <h1>Welcome to storytelling</h1>
+                    <p>Welcome to the stories project. We present to you random stories </p>
+                </div>
+                <div class="whatIsInYourMined">
+
+                    <button id="butbut" class="button-86" role="button">what is in your mined</button>
+                </div>
+            </div>
+
+            <div class="logo">
+                <img class="log" src="../public/src/img/Component 11.png" alt="">
+                <img class="Eff" src="../public/src/img/Frame 4.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="enstory storys" style="display: none;">
+        <img class="backgr" src="../public/src/img/Plane Sculpt - Copy@2-1920x950 5.png" alt="">
+
+        <div class="container">
+            <div class="taitel-content">
+                <div class="name">
+                    <h1 id="title">The story of the wolf and the mouse</h1>
+
+                    <div class="totoril">
+
+                        <p>About the story:</p>
+                        <span id="title_about">Contrary to popular belief, Lorem Ipsum is not simply random text...</span>
+                    </div>
+                </div>
+
+                <img id="titleImg" src="/src/img/Rectangle 1185.png" alt="">
+            </div>
+
+            <div id="StoryTexts">
+                <div class="rodMab_Continer">
+                    <p class="text-rigt">Contrary Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, cum
+                        nesciunt. Ut, doloribus cumque illum illo, eum perspiciatis voluptates quibusdam omnis dignissimos
+                        error aspernatur, corporis deserunt incidunt modi beatae minima. Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Quasi, facere maiores sit voluptates fugiat et. Porro delectus at quia
+                        officiis tempora laudantium corrupti ab esse dolor adipisci, quam alias facere exercitationem
+                        voluptatum et aspernatur animi beatae blanditiis ratione voluptates cum quisquam, sequi iure!
+                        Reprehenderit saepe, odio quia rem dolor non vero deserunt aliquid laborum, quam recusandae eum!
+                        Distinctio ipsam eligendi veniam dolorem recusandae nisi, quia optio aperiam natus! Ipsa explicabo
+                        doloremque sapiente, dolorum quaerat dicta facere, repellendus magni sunt asperiores alias unde est
+                        nam a? Quo ex maxime vel vitae a aut, eaque ea rem voluptatem illo veniam aliquid molestiae. to
+                        popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
+                        literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                        Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from
+                        a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered
+                        the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum
+                        et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on
+                        the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem
+                        ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                </div>
+    
+                <div class="leftMab_Continer">
+                    <p class="text-left">Contrary Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, cum
+                        nesciunt. Ut, doloribus cumque illum illo, eum perspiciatis voluptates quibusdam omnis dignissimos
+                        error aspernatur, corporis deserunt incidunt modi beatae minima. Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Quasi, facere maiores sit voluptates fugiat et. Porro delectus at quia
+                        officiis tempora laudantium corrupti ab esse dolor adipisci, quam alias facere exercitationem
+                        voluptatum et aspernatur animi beatae blanditiis ratione voluptates cum quisquam, sequi iure!
+                        Reprehenderit saepe, odio quia rem dolor non vero deserunt aliquid laborum, quam recusandae eum!
+                        Distinctio ipsam eligendi veniam dolorem recusandae nisi, quia optio aperiam natus! Ipsa explicabo
+                        doloremque sapiente, dolorum quaerat dicta facere, repellendus magni sunt asperiores alias unde est
+                        nam a? Quo ex maxime vel vitae a aut, eaque ea rem voluptatem illo veniam aliquid molestiae. to
+                        popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
+                        literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                        Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from
+                        a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered
+                        the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum
+                        et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on
+                        the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem
+                        ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                </div>
+    
+                <div class="rodMab_Continer">
+                    <p class="text-rigt">Contrary Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, cum
+                        nesciunt. Ut, doloribus cumque illum illo, eum perspiciatis voluptates quibusdam omnis dignissimos
+                        error aspernatur, corporis deserunt incidunt modi beatae minima. Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Quasi, facere maiores sit voluptates fugiat et. Porro delectus at quia
+                        officiis tempora laudantium corrupti ab esse dolor adipisci, quam alias facere exercitationem
+                        voluptatum et aspernatur animi beatae blanditiis ratione voluptates cum quisquam, sequi iure!
+                        Reprehenderit saepe, odio quia rem dolor non vero deserunt aliquid laborum, quam recusandae eum!
+                        Distinctio ipsam eligendi veniam dolorem recusandae nisi, quia optio aperiam natus! Ipsa explicabo
+                        doloremque sapiente, dolorum quaerat dicta facere, repellendus magni sunt asperiores alias unde est
+                        nam a? Quo ex maxime vel vitae a aut, eaque ea rem voluptatem illo veniam aliquid molestiae. to
+                        popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
+                        literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                        Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from
+                        a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered
+                        the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum
+                        et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on
+                        the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem
+                        ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="/src/js/AliThings.js"></script>
+    <script  src="/src/js/pages/config/index.js"></script>
+    <script>
+        let but = document.getElementById("butbut");
+        let sto = document.getElementById("closs");
+        let popap = document.getElementById("popapver");
+
+        const removeCreator = () =>{
+            popap.style.transition = `all 0.2s cubic-bezier(0, 0.01, 1, 0.57) 0s`;
+            popap.style.zIndex = `0`;
+            popap.style.opacity = `0`;
+        }
+        const create_story_button = document.querySelector("#create_story_button")
+        create_story_button.onclick = async() => {
+            removeCreator()
+            hiedWelcome()
+        }
+
+
+        but.onclick = () => {
+            popap.style.opacity = `1`;
+            popap.style.zIndex = `10`;
+            popap.style.transition = `all 0.2s cubic-bezier(0, 0.01, 1, 0.57) 0s`;
+        }
+
+        sto.onclick = () => {
+            removeCreator()
+            hiedWelcome()
+        }
+
+
+
+
+
+        const soso = document.querySelector('.soso').children;
+
+        const colors = ['#7300ff', '#fff', '#000000', '834DE3', '0rgb(96, 96, 96)ff', '#fff'];
+
+        for (lolo of soso) {
+            lolo.style.left = Math.random() * 100 + '%';
+
+            lolo.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        }
+
+
+
+
+        const __ = (selector) => {
+            return document.querySelector(selector)
+        }
+
+        let volum = document.getElementById("volume");
+        let detai = document.getElementById("detai");
+        let curse = document.getElementById("curserrr");
+        let summ = document.getElementById("summ");
+        console.log(summ);
+
+        volum.onclick = () => {
+            detai.style.transition = `all 0.2s cubic-bezier(0, 0.01, 1, 0.57) 0s`;
+            detai.style.opacity = `1`;
+            detai.style.width = `250px`;
+            detai.style.cursor = `pointer`;
+            summ.style.cursor = `pointer`;
+        }
+
+        let pop = document.getElementById("pop");
+        let comple = document.getElementById("comple");
+        let clospopap = document.getElementById("clospopap");
+
+        const showSection = async(sectionId) => {
+            pop.style.transition = `all 0.2s cubic-bezier(0, 0.01, 1, 0.57) 0s`;
+            pop.style.opacity = `0`;
+            pop.style.userSelect = `none`;
+            pop.style.zIndex = `-110`;
+            await slp(200)
+            document.querySelectorAll(".containet").forEach(elm => {
+                elm.style.display = "none"
+            })
+            document.querySelector(`#${sectionId}`).style.display = "block"
+            await slp(200)
+            pop.style.transition = `all 0.2s cubic-bezier(0, 0.01, 1, 0.57) 0s`;
+            pop.style.opacity = `1`;
+            pop.style.zIndex = `100`;
+            pop.style.userSelect = `unset`;
+        }
+
+        const hideSecrion = async() =>{
+            pop.style.transition = `all 0.2s cubic-bezier(0, 0.01, 1, 0.57) 0s`;
+            pop.style.opacity = `0`;
+            pop.style.userSelect = `none`;
+            pop.style.zIndex = `-110`;
+        }
+        comple.onclick = () => {
+            showSection("cmplete_story")
+        }
+        __("#byAi").onclick = () => {
+            showSection("EditByAi")
+        }
+        __("#endStory").onclick = () => {
+            showSection("Ai_Ender")
+        }
+        const editByUser = () => {
+            console.log("ysy")
+            Storys.add(new StorySection("", "left"));
+            window.scrollTo({
+                behavior:"smooth",
+                top:100
+            })
+        }
+        __("#byMe").onclick = () => {
+            editByUser()
+        }
+        clospopap.onclick = () => {
+            hideSecrion()
+        }
+
+
+    </script>
+    <script defer src="/src/js/funcs.js"></script>
+    <script src="/src/js/yofi.js"></script>
+    
+</body>
+
+</html>

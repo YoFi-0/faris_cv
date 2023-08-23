@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- all.min.css -->
+    <link rel="stylesheet" href="Src/css/all.min.css">
+    <!-- style.css -->
+    <link rel="stylesheet" href="Src/css/index.css">
+    <!-- Font-Googel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,500;1,500&family=Open+Sans:ital,wght@0,600;1,500;1,600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Start menu -->
+    <div class="asid">
+        <div class="asid_bag">
+            <div class="selct_box">
+                <div class="toggle-settings">
+                    <i class="settin fas fa-cog fa-spin"></i>
+                </div>
+                <div class="leftt">
+                    <img src="Src/img/KHALIFA 5.jpg" alt="">
+                    <div class="product">
+                        <h1>naum</h1>
+                    </div>
+                    <div class="link">
+                        <a class="activ" href="#">new script</a>
+                        <a href="Dashboard.html">new licence</a>
+                        <a href="#">Button LOG</a>
+                    </div>
+                </div>
+            </div>
+            <div class="com">
+                <div class="nav_Mini-Bots">
+                    <h1>naum</h1>
+                    <span></span>
+                    <div class="albutton">
+                        <a id="new-script" href="#">new script</a>
+                        <div class="card_new">
+                            <span></span>
+                            <div class="contenar">
+                                <div class="Icon_d">
+                                    <i class="fas fa-times"></i>
+                                </div>
+                                <h1>new script</h1>
+                                <form action="" method="POST">
+                                    <input placeholder="new script" type="text">
+                                    <div class="butoon">
+                                        <input class="sub" type="submit" value="submit">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Stat Card -->
+                <section>
+                    <div class="card_Delete">
+                        <span></span>
+                        <div class="contenar">
+                            <h1>are you sure delete</h1>
+                            <form action="" method="POST">
+                                <div class="butoon">
+
+                                    <input id="delete" type="hidden" name="delete_id" value="">
+                                    <input class="btne" type="submit" value="yes">
+
+                                    <a id="no_Poppap" href="#">no</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="contenar">
+                        <div id="cards" class="card">
+                            <div class="box">
+                                <h1>number of scripts</h1>
+                                <p>0</p>
+                            </div>
+                            <div class="box">
+                                <h1>number of scripts</h1>
+                                <p>0</p>
+                            </div>
+                        </div>
+
+                        <div class="outputs">
+                            <div class="scroll">
+            
+                                <table>
+                                    <tr>
+                                        <th>script name</th>
+                                        <th>Token</th>
+                                        <th>Date created</th>
+                                        <th>Date</th>
+                                        <th>update</th>
+                                        <th>delete</th>
+                                    </tr>
+                                    <tbody id="tbody">
+                                        <tr>
+                                            <td>Hntter</td>
+                                            <td>Hntter</td>
+                                            <td>199</td>
+                                            <td>Z1000</td>
+                                            <td><button class="update">update</button></td>
+                                            <td><button id="yesOrNo" value="2" class="delete">delete</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- End Card -->
+    </div>
+    <!-- End menu -->
+
+
+    <script src="Src/js/main.js"></script>
+    <script>
+        const form = document.querySelectorAll("form");
+        form.forEach(element => {
+            element.addEventListener('submit', function (e) {
+                e.preventDefault();
+            });
+        });
+
+
+        document.getElementById("cards").onmousemove = (e) => {
+            for (const box of document.querySelectorAll(".box")) {
+                const rect = box.getBoundingClientRect(), x = e.clientX - rect.left, y = e.clientY - rect.top;
+                box.style.setProperty("--mouse-x", `${x}px`);
+                box.style.setProperty("--mouse-y", `${y}px`);
+            };
+        };
+    </script>
+
+</body>
+
+</html>

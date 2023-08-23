@@ -1,0 +1,725 @@
+/*  Start Global Rules */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #212121;
+    margin: 0;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    
+}
+
+.asid {
+    position: relative;
+    background-color: #222222;
+    height: 100vh;
+    overflow: hidden;
+
+    .asid_bag {
+        position: relative;
+        display: flex;
+        height: -webkit-fill-available;
+
+        .selct_box {
+            position: relative;
+            background-color: #1c1c1c;
+            text-align: center;
+            width: max(25vw, 25em);
+            z-index: 100;
+            transition: ease .7s;
+
+            .toggle-settings {
+                position: absolute;
+                right: max(-3.3vw, -3.3em);
+                border-radius: max(0vw, 0em) max(1vw, 1em) max(1vw, 1em) max(0vw, 0em);
+                top: max(0.5vw, 0.5em);
+                color: white;
+                background-image: linear-gradient(90deg, #1c1c1c, #2f2f2f);
+
+
+                @media (max-width: 960px) {
+                    & {
+                        right: max(-5vw, -5em);
+                    }
+
+                    @media (max-width: 790px) {
+                        & {
+                            right: max(-5.7vw, -5.7em);
+                        }
+                    }
+
+                    @media (max-width: 635px) {
+                        & {
+                            right: max(-7.7vw, -7.7em);
+                        }
+                    }
+
+                    @media (max-width: 500px) {
+                        & {
+                            right: max(-9.7vw, -9.7em);
+                            ;
+                        }
+                    }
+
+                    @media (max-width: 395px) {
+                        & {
+                            right: max(-11.7vw, -11.7em);
+                            ;
+                        }
+                    }
+                }
+
+                .settin {
+                    padding: max(0.7vw, 0.7em);
+                    text-align: center;
+                    cursor: pointer;
+                    font-size: max(1.4vw, 1.4em);
+                }
+            }
+
+            .leftt {
+                left: 0;
+                position: relative;
+
+                img {
+                    width: max(6vw, 5em);
+                    border-radius: max(50vw, 50em);
+                    margin: max(2vw, 2em) max(0vw, 0em) max(0vw, 0em);
+                }
+
+                .product {
+                    color: white;
+                    font-weight: bold;
+                    width: fit-content;
+                    margin: max(-1vw, -1em) auto;
+                    text-align: initial;
+
+                    h1 {
+                        padding: max(1vw, 1em) max(0vw, 0em);
+                        font-size: max(1.9vw, 1.9em);
+                        user-select: none;
+                    }
+                }
+
+                .link {
+                    text-align: left;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 91vh;
+
+
+                    .top {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        a.activ {
+                            position: relative;
+                            color: #ffffff;
+                            background-color: #222222;
+                            padding: max(1vw, 1em);
+                            z-index: 100;
+                            overflow: hidden;
+                            font-size: max(1.3vw, 1.3em);
+                            margin-bottom: max(0.7vw, 0.7em);
+                            user-select: none;
+                            cursor: auto;
+                            z-index: 1;
+                        }
+
+                        a {
+                            position: relative;
+                            color: #ffffff;
+                            padding: max(1vw, 1em);
+                            z-index: 100;
+                            overflow: hidden;
+                            font-size: max(1.3vw, 1.3em);
+                            margin-bottom: 20px;
+                            z-index: 1;
+
+                            &::after {
+                                position: absolute;
+                                content: "";
+                                left: 0;
+                                top: 0;
+                                width: max(0.2vw, 0.2em);
+                                height: max(5vw, 5em);
+                                background-color: #222222;
+                                z-index: -10;
+                                transition: ease .9s;
+                            }
+
+                            &:hover::after {
+                                width: 100%;
+                                color: rgb(255, 255, 255);
+                                z-index: -10;
+                                border-radius: max(0vw, 0em);
+                            }
+                        }
+                    }
+                    .bottom {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        .redDelet {
+                            position: relative;
+                            color: #fb0000;
+                            padding: max(1vw, 1em);
+                            z-index: 100;
+                            overflow: hidden;
+                            font-size: max(1.3vw, 1.3em);
+                            margin-bottom: 20px;
+                            z-index: 1;
+                            transition: ease .9s;
+    
+                            &::after {
+                                position: absolute;
+                                content: "";
+                                left: 0;
+                                top: 0;
+                                width: max(0.2vw, 0.2em);
+                                height: max(5vw, 5em);
+                                background-color: #a30000;
+                                z-index: -10;
+                                transition: ease .9s;
+                            }
+    
+                            &:hover::after {
+                                width: 100%;
+                                z-index: -10;
+                                border-radius: max(0vw, 0em);
+                            }
+                            &:hover {
+                                color: #ffffff;
+                            }
+                        }
+
+                        .delet_new {
+                            display: none;
+                            transition: .3s;
+                            opacity: 0;
+                            position: relative;
+        
+                            span {
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgba(0, 0, 0, 0.678);
+                                z-index: 1;
+                            }
+        
+                            .contenar11 {
+                                position: fixed;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                background-color: rgb(28 28 28);
+                                padding: 18px;
+                                border-radius: 4px;
+                                width: 500px;
+                                animation: dwonUp 1s backwards;
+                                -webkit-animation: dwonUp 1s backwards;
+                                z-index: 2;
+        
+                                .Icon_d {
+                                    position: absolute;
+                                    top: -25px;
+                                    right: -18px;
+                                    font-size: max(3vw, 3em);
+        
+                                    i {
+                                        user-select: none;
+                                        cursor: pointer;
+                                        color: white;
+                                    }
+                                }
+        
+                                h1 {
+                                    text-align: center;
+                                    font-size: max(1.3vw, 1.3em);
+                                    user-select: none;
+                                    padding-bottom: max(1vw, 1em);
+                                    color: white;
+                                    user-select: none;
+                                }
+        
+                                input {
+                                    position: relative;
+                                    border: 1px solid transparent;
+                                    margin: max(1vw, 1em) max(0vw, 0em);
+                                    background-color: #cbcbcb00;
+                                    border-radius: 0px;
+                                    padding: max(0.9vw, 0.9em) max(0vw, 0em);
+                                    border-bottom: max(0.1vw, 0.1em) solid #fff;
+                                    display: block;
+                                    width: 100%;
+                                    transition: 0.3s;
+                                    color: #fff;
+                                }
+        
+                                input::placeholder {
+                                    font-weight: 500;
+                                    color: #777;
+                                    font-size: max(1vw, 1em);
+                                    transition: 0.3s;
+                                }
+        
+                                input:focus {
+                                    outline: 1;
+                                    padding: max(0.9vw, 0.9em) max(0.9vw, 0.9em);
+                                }
+        
+                                input:focus::placeholder {
+                                    color: transparent;
+                                }
+        
+                                .butoon {
+                                    text-align: right;
+                                    margin: max(2vw, 2em) 0 0;
+        
+                                    .sub {
+                                        color: white;
+                                        padding: max(0.5vw, 0.5em) max(1vw, 1em);
+                                        margin: max(0vw, 0em) max(0vw, 0em) max(0vw, 0em) auto;
+                                        background-color: #a30000;
+                                        border-radius: max(0.2vw, 0.2em);
+                                        width: fit-content;
+                                        font-size: max(1.5vw, 1.5em);
+                                        border: none;
+                                        cursor: pointer;
+                                        transition: 0.3s;
+                                    }
+                                }
+                            }
+        
+                            @keyframes dwonUp {
+                                to {
+                                    top: 50%;
+                                    opacity: 1;
+                                }
+        
+                                from {
+                                    top: 0%;
+                                    opacity: 0;
+                                }
+                            }
+        
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .selct_box.clos {
+            position: relative;
+            transition: 1s;
+            left: 0;
+            width: 0;
+        }
+
+        .com {
+            width: max(75vw, 75em);
+
+            .nav_Mini-Bots {
+                color: #ffffff;
+                background-color: #333333;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: max(1vw, 1em) max(4vw, 4em);
+                z-index: 100;
+                flex-direction: row-reverse;
+
+                h1 {
+                    text-align: center;
+                    font-size: max(2vw, 2em);
+                    user-select: none;
+                }
+
+            }
+
+            section {
+                padding: max(3vw, 3em) max(1vw, 1em);
+                background-color: #222222;
+                box-shadow: 0 0 25rem 0rem black;
+                height: 100vh;
+
+                @media (max-height: 731px) {
+                    & {
+                        padding: max(0vw, 0em) max(1vw, 1em);
+                    }
+                }
+
+                @media (max-height: 732px) {
+                    & {
+                        padding: max(0vw, 0em) max(1vw, 1em);
+                    }
+                }
+
+                h1 {
+                    color: white;
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: max(4vw, 4em);
+                    margin: max(0.3vw, 0.3em) 0 max(0.5vw, 0.5em);
+
+                    @media (max-width: 715px) {
+                        & {
+                            font-size: max(3.2vw, 3.2em);
+                        }
+
+                        @media (max-width: 731px) {
+                            & {
+                                margin: max(0vw, 0em) 0 max(0.5vw, 0.5em);
+                            }
+                        }
+
+                        @media (max-width: 580px) {
+                            & {
+                                font-size: max(2.7vw, 2.7em);
+                            }
+                        }
+
+                        @media (max-width: 496px) {
+                            & {
+                                font-size: max(2vw, 2em);
+                            }
+                        }
+
+                        @media (max-width: 408px) {
+                            & {
+                                font-size: max(1.7vw, 1.7em);
+                            }
+                        }
+                    }
+                }
+
+                .contenar {
+                    .card {
+                        display: flex;
+                        width: 100%;
+                        margin: 0 auto;
+                        justify-content: space-evenly;
+                        flex-wrap: wrap;
+                        align-items: center;
+
+                        .glow-button {
+                            border: none;
+                            outline: none;
+                            color: #fff;
+                            padding: max(1vw, 1em) max(2vw, 2em);
+                            font-size: max(1.5vw, 1.5em);
+                            background: #222222;
+                            cursor: pointer;
+                            position: relative;
+                            margin: max(0.3vw, 0.3em);
+                            z-index: 0;
+                            border-radius: 10px;
+
+                            @media (max-width: 831px) {
+                                & {
+                                    width: 150px;
+                                    height: 50px;
+                                    padding: 0 0;
+                                }
+                            }
+
+                            &:before {
+                                content: '';
+                                background: linear-gradient(45deg, #ffffff, #434343, #212121, #777, #1c1c1c, #2f2f2f, #fff, #2a3a37, #1c1c1c);
+                                position: absolute;
+                                top: -2px;
+                                left: -2px;
+                                background-size: 400%;
+                                z-index: -1;
+                                filter: blur(5px);
+                                width: calc(100% + 4px);
+                                height: calc(100% + 4px);
+                                animation: glowing 20s linear infinite;
+                                opacity: 0;
+                                transition: opacity .3s ease-in-out;
+                                border-radius: 10px;
+                            }
+
+                            &:active {
+                                color: rgb(255, 255, 255)
+                            }
+
+                            &:active:after {
+                                background: transparent;
+                            }
+
+                            &:hover:before {
+                                opacity: 1;
+                            }
+
+                            &:after {
+                                z-index: -1;
+                                content: '';
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                background: #1c1c1c;
+                                left: 0;
+                                top: 0;
+                                border-radius: 10px;
+                            }
+                        }
+                    }
+
+                    @keyframes glowing {
+                        0% {
+                            background-position: 0 0;
+                        }
+
+                        50% {
+                            background-position: 400% 0;
+                        }
+
+                        100% {
+                            background-position: 0 0;
+                        }
+                    }
+
+                    .informations {
+
+                        h1 {
+                            color: #777;
+                            text-align: center;
+                            font-weight: bold;
+                            font-size: max(3vw, 3em);
+                            margin: max(0.1vw, 0.1em) 0 max(0.3vw, 0.3em) 0;
+
+                            @media (max-height: 667px) {
+                                & {
+                                    font-size: max(2vw, 2em);
+                                }
+                            }
+                        }
+
+                        .contact {
+                            background-color: #1c1c1c;
+                            border-radius: max(0.3vw, 0.3em);
+                            width: 70%;
+                            margin: 0 auto;
+                            padding: max(1vw, 1em) max(2vw, 2em) max(0vw, 0em);
+                            overflow-y: auto;
+                            max-height: max(23vw, 23em);
+
+                            @media (max-width: 520px) {
+                                & {
+                                    width: 101%;
+                                }
+
+                                @media (max-height: 731px) {
+                                    & {
+                                        padding: max(0vw, 0em) max(2vw, 2em) max(0vw, 0em);
+                                    }
+                                }
+
+                                @media (max-height: 732px) {
+                                    & {
+                                        padding: max(0vw, 0em) max(2vw, 2em) max(0vw, 0em);
+                                    }
+                                }
+
+                            
+                                @media (max-height: 667px) {
+                                    & {
+                                        max-height: max(18vw, 18em);
+                                    }
+                                }
+                            }
+                            @media (max-width: 360px) and (max-height: 740px) {
+                                & {
+                                    padding: max(1vw, 1em) max(1vw, 1em) max(0vw, 0em);
+                                    max-height: max(18vw, 18em);
+                                }
+                            }
+
+                            &::-webkit-scrollbar {
+                                width: .2rem;
+                            }
+
+                            &::-webkit-scrollbar-track {
+                                background: transparent;
+                            }
+
+                            &::-webkit-scrollbar-thumb {
+                                background: #7b7b7b;
+                                border-radius: 20%;
+                            }
+
+                            .username {
+                                form {
+                                    display: flex;
+                                    flex-direction: column;
+
+                                    input {
+                                        position: relative;
+                                        border: 1px solid transparent;
+                                        margin: max(1vw, 1em) max(0vw, 0em);
+                                        background-color: #cbcbcb00;
+                                        border-radius: 0px;
+                                        padding: max(0.9vw, 0.9em) max(0vw, 0em);
+                                        border-bottom: max(0.1vw, 0.1em) solid #6b6b6b;
+                                        display: block;
+                                        transition: 0.3s;
+                                        color: #fff;
+                                    }
+
+                                    input::placeholder {
+                                        font-weight: 500;
+                                        color: #777;
+                                        font-size: max(1vw, 1em);
+                                        transition: 0.3s;
+                                    }
+
+                                    input:focus {
+                                        outline: 1;
+                                        padding: max(0.9vw, 0.9em) max(0.9vw, 0.9em);
+                                    }
+
+                                    input:focus::placeholder {
+                                        color: transparent;
+                                    }
+
+                                    .boteen {
+                                        width: 100%;
+                                        display: flex;
+                                        justify-content: flex-end;
+
+                                        .click {
+                                            border: none;
+                                            background-color: #333333;
+                                            width: fit-content;
+                                            padding: max(1vw, 1em) max(2vw, 2em);
+                                            border-radius: max(0.2vw, 0.2em);
+                                        }
+                                    }
+                                }
+                            }
+
+                            .email {
+                                form {
+                                    display: flex;
+                                    flex-direction: column;
+
+                                    input {
+                                        position: relative;
+                                        border: 1px solid transparent;
+                                        margin: max(1vw, 1em) max(0vw, 0em);
+                                        background-color: #cbcbcb00;
+                                        border-radius: 0px;
+                                        padding: max(0.9vw, 0.9em) max(0vw, 0em);
+                                        border-bottom: max(0.1vw, 0.1em) solid #6b6b6b;
+                                        display: block;
+                                        transition: 0.3s;
+                                        color: #fff;
+                                    }
+
+                                    input::placeholder {
+                                        font-weight: 500;
+                                        color: #777;
+                                        font-size: max(1vw, 1em);
+                                        transition: 0.3s;
+                                    }
+
+                                    input:focus {
+                                        outline: 1;
+                                        padding: max(0.9vw, 0.9em) max(0.9vw, 0.9em);
+                                    }
+
+                                    input:focus::placeholder {
+                                        color: transparent;
+                                    }
+
+                                    .boteen {
+                                        width: 100%;
+                                        display: flex;
+                                        justify-content: flex-end;
+
+                                        .click {
+                                            border: none;
+                                            background-color: #333333;
+                                            width: fit-content;
+                                            padding: max(1vw, 1em) max(2vw, 2em);
+                                            border-radius: max(0.2vw, 0.2em);
+                                        }
+                                    }
+                                }
+                            }
+
+                            .password {
+                                form {
+                                    display: flex;
+                                    flex-direction: column;
+
+                                    input {
+                                        position: relative;
+                                        border: 1px solid transparent;
+                                        margin: max(1vw, 1em) max(0vw, 0em);
+                                        background-color: #cbcbcb00;
+                                        border-radius: 0px;
+                                        padding: max(0.9vw, 0.9em) max(0vw, 0em);
+                                        border-bottom: max(0.1vw, 0.1em) solid #6b6b6b;
+                                        display: block;
+                                        transition: 0.3s;
+                                        color: #fff;
+                                    }
+
+                                    input::placeholder {
+                                        font-weight: 500;
+                                        color: #777;
+                                        font-size: max(1vw, 1em);
+                                        transition: 0.3s;
+                                    }
+
+                                    input:focus {
+                                        outline: 1;
+                                        padding: max(0.9vw, 0.9em) max(0.9vw, 0.9em);
+                                    }
+
+                                    input:focus::placeholder {
+                                        color: transparent;
+                                    }
+
+                                    .boteen {
+                                        width: 100%;
+                                        display: flex;
+                                        justify-content: flex-end;
+
+                                        .click {
+                                            border: none;
+                                            background-color: #333333;
+                                            width: fit-content;
+                                            padding: max(1vw, 1em) max(2vw, 2em);
+                                            border-radius: max(0.2vw, 0.2em);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

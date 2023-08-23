@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+
+:root {
+  --main-color:#EAB600;
+  --main-color-dark:#eab700e7;
+  --main-color-alt:#2ABFFF;
+  --main-background-color:#2B2B2B;
+  --main-background-color-alt:#1C1C1C;
+  --main-background-color-alt2:#151515;
+  --main-padding-bottom:100px;
+  --main-padding-top:100px;
+  --main-transition:0.3s;
+}
+
+/* appearance */
+
+.appearance {
+  position: relative;
+  transition: var(--main-transition);
+
+  &::before {
+    content: "";
+    position: fixed;
+    width: 500px;
+    z-index: -100;
+    height: 500px;
+    background-color: transparent;
+    border-radius: 50%;
+    top: -176px;
+    border: 150px solid #27a9e0;
+    right: -194px;
+    transition: var(--main-transition);
+  }
+
+  &::after {
+    content: "";
+    position: fixed;
+    width: 500px;
+    z-index: -100;
+    height: 500px;
+    background-color: transparent;
+    border-radius: 50%;
+    bottom: -167px;
+    border: 150px solid #27a9e0;
+    left: -145px;
+    transition: var(--main-transition);
+  }
+}
+
+/* Small */
+@media (max-width: 829px) {
+  .appearance::before {
+    width: 400px;
+    height: 400px;
+    top: -346px;
+    right: -270px;
+  }
+}
+
+/* Small */
+@media (max-width: 829px) {
+  .appearance::after {
+    width: 400px;
+    height: 400px;
+    bottom: -197px;
+    left: -249px;
+  }
+}
+
+/* appearance */
+
+/*  Start Global Rules */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--main-background-color);
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/*  End Global Rules */
+
+/* Start login */
+
+.login {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 97%;
+  left: 50%;
+  top: 50%;
+  background: #2C2C2C;
+  box-shadow: 0px 0px 38px rgb(0 0 0 / 81%);
+  border-radius: 10px;
+  padding: 50px 35px 0;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    color: var(--main-color);
+  }
+
+  h1 {
+    color: var(--main-color-alt);
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+
+  .Log {
+    color: var(--main-color-alt);
+    padding: 15px 0 20px;
+    font-size: 30px;
+    width: 100%;
+    font-weight: bolder;
+
+    span {
+      color: white;
+      font-weight: 500;
+      font-size: 20px;
+    }
+  }
+
+  .login-container {
+    background-color: #2c2c2c;
+    position: relative;
+    max-width: 590px;
+    justify-self: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  input {
+    border: 1px solid transparent;
+    margin: 25px 0;
+    background-color: #cbcbcb00;
+    border-radius: 0px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--main-color-alt);
+    display: block;
+    width: 100%;
+    transition: 0.3s;
+    color: #fff;
+
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px; */
+
+    &::placeholder {
+      font-weight: 500;
+      color: white;
+      transition: 0.3s;
+    }
+
+    &:focus {
+      outline: 0;
+      border: 1px solid var(--main-color-alt);
+      padding: 15px 10px;
+
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+
+  .For, .button {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 25px 0;
+    gap: 50px;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .For a {
+    &:first-child, &:last-child {
+      color: var(--main-color-alt);
+    }
+  }
+
+  .AllForm {
+    .button {
+      a:first-child, input:last-child {
+        background-color: #2abfff70;
+        color: white;
+        border-radius: 10px;
+        font-size: 15px;
+        padding: 12px 10px;
+        font-weight: 500;
+        text-align: center;
+        width: fit-content;
+        transition: 0.3s;
+      }
+    }
+
+    .Icon {
+      background-color: #21242500;
+      padding: 14px 10px 16px;
+      color: #fff9f9;
+      border: none;
+      display: flex;
+      text-align: end;
+      position: absolute;
+      right: 0px;
+      top: 171px;
+    }
+
+    .Remmber {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: max(1em,1vw);
+      color: white;
+      font-weight: bold;
+
+      .chek {
+        width: 22px;
+        margin: 0 10px 0px 0;
+      }
+
+      input {
+        width: fit-content;
+        cursor: pointer;
+      }
+    }
+
+    .button {
+      a:first-child i {
+        margin-right: 10px;
+      }
+
+      input:last-child {
+        padding: 10px 25px;
+        background-color: var(--main-color-alt);
+
+        &:hover {
+          background-color: #239cd0;
+        }
+      }
+
+      a:first-child:hover {
+        background-color: #239cd0;
+      }
+    }
+  }
+
+  .back {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 35px;
+    font-size: 25px;
+    border-radius: 90px;
+    color: #fff;
+    transition: var(--main-transition);
+
+    i {
+      transition: var(--main-transition);
+    }
+
+    &:hover i {
+      transform: translateX(-10px) scale(0.9);
+      color: var(--main-color-alt);
+    }
+  }
+}
+
+/*  */
+@media (max-width: 470px) {
+  .login .Log {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/*  */
+@media (max-width: 470px) {
+  .login {
+    .For, .button {
+      font-size: 11px;
+      padding: 12px 1px 0px;
+    }
+  }
+}
+
+/*  */
+@media (max-width: 470px) {
+  .login .AllForm .button {
+    a:first-child, input:last-child {
+      font-size: 8px;
+    }
+  }
+}
+
+/*  */
+@media (max-width: 470px) {
+  .login .AllForm .Icon {
+    top: 195px;
+  }
+}
+
+/* End login */

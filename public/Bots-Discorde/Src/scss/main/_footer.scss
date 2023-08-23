@@ -1,0 +1,93 @@
+%footer {
+    overflow: hidden;
+    height: 100vh;
+    background-color: #212121;
+    transition: .3s;
+    .footer-content {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .top,
+        .bottom {
+            margin: max(1vw, 1em) max(0vw, 0em);
+            position: relative;
+            color: white;
+        }
+
+        .content {
+            border-radius: max(1vw, 1em);
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .text_right {
+                left: max(-250vw, -250em);
+                position: absolute;
+
+                h1 {
+                    font-size: max(6vw, 6em);
+                    padding-left: max(0.5vw, 0.5em);
+                    
+                    @media (max-width: 1195px) {
+                        & {
+                            font-size: max(4vw, 4em);
+                            
+                        }
+                    }
+                }
+            }
+
+            .card-left {
+                position: absolute;
+                right: max(-100vw, -100em);
+                padding: max(2.9vw, 2em);
+                box-shadow: max(0vw, 0em) max(0vw, 0em) max(6vw, 6em) max(-2vw, -2em) black;
+                backdrop-filter: blur(10px);
+                width: max(22vw, 22em);
+                border-radius: max(0.8vw, 0.8em) 0px 0 max(0.8vw, 0.8em);
+
+                h2 {
+                    color: #00CE79;
+                    font-size: max(1.3vw, 1.3em);
+                }
+            }
+
+            .card-right {
+                position: absolute;
+                left: max(-100vw, -100em);
+                padding: max(2.9vw, 2em);
+                box-shadow: max(0vw, 0em) max(0vw, 0em) max(6vw, 6em) max(-2vw, -2em) black;
+                backdrop-filter: blur(10px);
+                width: max(22vw, 22em);
+                border-radius: 0px max(0.3vw, 0.3em) max(0.3vw, 0.3em) 0px;
+
+                h2 {
+                    color: #00CE79;
+                    font-size: max(1.3vw, 1.3em);
+                }
+            }
+
+            .text_left {
+                right: max(-250vw, -250em);
+                position: absolute;
+
+                h1 {
+                    padding-right: max(0.5vw, 0.5em);
+                    font-size: max(5vw, 6em);
+                    width: max-content;
+
+                    @media (max-width: 1125px) {
+                        & {
+                            font-size: max(4vw, 4em);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
